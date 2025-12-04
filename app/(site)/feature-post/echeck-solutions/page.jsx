@@ -71,7 +71,7 @@ const EcheckSolutions = () => {
                     </div>
 
                     <div className="grid grid-cols-12 gap-6 lg:gap-10">
-                        <div className="col-span-12 lg:col-span-6 lg:space-y-4.5 space-y-3.5" data-aos="zoom-in">
+                        <div className="col-span-12 lg:col-span-6 lg:space-y-4.5 space-y-3.5" data-aos="fade-right">
                             <Accordion items={ECHECK_ITEMS} isFirstOpen={true} />
                         </div>
 
@@ -142,7 +142,7 @@ const EcheckSolutions = () => {
                         </div>
 
                         <div className="col-span-12 lg:col-span-6 lg:space-y-4.5 space-y-3.5 lg:block hidden"
-                            data-aos="fade-right"
+                            data-aos="fade-left"
                         >
                             <Accordion items={FREQUENTLY_QUESTIONS} isFirstOpen={true} />
                         </div>
@@ -228,20 +228,20 @@ const EcheckSolutions = () => {
                         </div>
 
                         <div className="col-span-12 lg:col-span-6 lg:space-y-4.5 space-y-3.5 lg:block hidden"
-                            data-aos="fade-right"
+                            data-aos="fade-left"
                         >
                             <Accordion items={STILL_QUESTIONS} isFirstOpen={true} />
                         </div>
                     </div>
 
                     <div className="col-span-12 lg:col-span-6 lg:space-y-4.5 space-y-3.5 lg:hidden block"
-                        data-aos="fade-right"
+                        data-aos="zoom-in-up"
                     >
                         <Accordion items={FREQUENTLY_QUESTIONS} isFirstOpen={true} />
                     </div>
 
                     <div className="col-span-12 lg:col-span-6 lg:space-y-4.5 space-y-3.5 lg:hidden block pt-10"
-                        data-aos="fade-right"
+                        data-aos="zoom-in-up"
                     >
                         <Accordion items={STILL_QUESTIONS} isFirstOpen={true} />
                     </div>

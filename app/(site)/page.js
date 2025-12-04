@@ -42,16 +42,22 @@ const Home = () => {
                                     </p>
                                 </div>
 
-                                <button className="read-more mt-5 mb-2 linear-gradient-text opacity-0 invisible 
-                                    group-hover:opacity-100 group-hover:visible group-hover:-translate-y-1.5 
+                                <Link href={item?.url} className="read-more mt-5 mb-2 linear-gradient-text opacity-0  
+                                    group-hover:opacity-100 group-hover:visible group-hover:-translate-y-1.5 invisible
                                     relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-px 
-                                    after:w-0 after:bg-linear-to-r after:from-[#ef793c] after:to-[#ff6a00] 
-                                    after:transition-all after:duration-500 hover:after:w-full text-[16px]"
+                                    after:w-0 after:bg-linear-to-r after:from-[#ef793c] after:to-[#ff6a00] hidden
+                                    after:transition-all after:duration-500 hover:after:w-full text-[16px] lg:inline-block"
                                 >
-                                    <Link href={item?.url}>
-                                        Read More
-                                    </Link>
-                                </button>
+                                    Read More
+                                </Link>
+
+                                  <Link href={item?.url} className="mt-5 mb-2 linear-gradient-text  
+                                    relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-px 
+                                    after:w-0 after:bg-linear-to-r after:from-[#ef793c] after:to-[#ff6a00] inline-block
+                                    after:transition-all after:duration-500 hover:after:w-full text-[16px] lg:hidden"
+                                >
+                                    Read More
+                                </Link>
                             </div>
                         ))}
                     </div>
@@ -62,7 +68,6 @@ const Home = () => {
                         />
                     </div>
                 </div>
-
             </section>
 
             <PaymentSection />

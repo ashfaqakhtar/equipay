@@ -81,7 +81,7 @@ const RiskManagement = () => {
                     </div>
 
                     <div className="grid grid-cols-12 gap-6 lg:gap-10 md:pb-14 pb-10">
-                        <div className="col-span-12 lg:col-span-6 lg:space-y-4.5 space-y-3.5" data-aos="zoom-in">
+                        <div className="col-span-12 lg:col-span-6 lg:space-y-4.5 space-y-3.5" data-aos="fade-right">
                             <Accordion items={RISK_MANAGEMENT_ITEMS} isFirstOpen={true} />
                         </div>
 
@@ -145,7 +145,9 @@ const RiskManagement = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-3 xl:gap-8 gap-5 md:pt-20 pt-16 pb-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 xl:gap-8 gap-5 md:pt-20 pt-16 pb-10"
+                        data-aos='zoom-in-up'
+                    >
                         <Accordion items={ABOUT_ITEMS} />
                     </div>
                 </div>
