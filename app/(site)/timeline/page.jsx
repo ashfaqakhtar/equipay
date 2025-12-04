@@ -40,7 +40,9 @@ const Timeline = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-3 xl:gap-8 lg:gap-5 gap-10 md:pt-20 pt-16 pb-10 ">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 xl:gap-8 lg:gap-5 gap-10 md:pt-20 pt-16 pb-10"
+                        data-aos='zoom-in-up'
+                    >
                         <Accordion items={TIMELINES_ITEMS} />
                     </div>
                 </div>

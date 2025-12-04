@@ -27,7 +27,7 @@ const Accordion = ({ items = [], isFirstOpen = false }) => {
         <Fragment>
             {items?.map((item, index) => (
                 <div key={index} className={`transition-all duration-300 ease overflow-hidden bg-white
-                    ${isOpen(index) ? "shadow-[0_0px_20px_#6c76861a]" : ""}`} data-aos="zoom-in-up"
+                    ${isOpen(index) ? "shadow-[0_0px_20px_#6c76861a]" : ""}`}
                 >
                     <button onClick={() => handleToggle(index)} className={`cursor-pointer w-full relative text-left flex 
                         justify-between items-center ${isOpen(index) ? "" : "shadow-[0_0px_20px_#6c76861a]"}`}
