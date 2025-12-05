@@ -104,21 +104,18 @@ const Navbar = () => {
                                     </div>
                                 ))}
 
-                                <div className="border border-[#ef793c] bg-linear-to-r from-[#ef793c] to-[#ff6a00] 
-                                    rounded-sm text-sm py-2 font-medium px-3 cursor-pointer"
-                                >
-                                    <Link href='/learn-more' className="text-white uppercase inter">
-                                        Learn More
-                                    </Link>
-                                </div>
 
-                                <div className="border border-[#ef793c] bg-linear-to-r from-[#ef793c] to-[#ff6a00] 
-                                    rounded-sm text-sm py-2 font-medium px-3 cursor-pointer"
+                                <Link href='/learn-more' className="border border-[#ef793c] rounded-sm text-sm py-2 px-3
+                                    bg-linear-to-r from-[#ef793c] to-[#ff6a00] uppercase font-medium cursor-pointer"
                                 >
-                                    <Link href='/apply-now' className="text-white uppercase inter">
-                                        Apply Now
-                                    </Link>
-                                </div>
+                                    Learn More
+                                </Link>
+
+                                <Link href='/apply-now' className="border border-[#ef793c] rounded-sm text-sm py-2 px-3
+                                    bg-linear-to-r from-[#ef793c] to-[#ff6a00] uppercase font-medium cursor-pointer"
+                                >
+                                    Apply Now
+                                </Link>
                             </div>
                         </div>
 

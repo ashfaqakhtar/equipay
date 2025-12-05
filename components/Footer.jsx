@@ -17,10 +17,12 @@ const Footer = () => {
                             alt='logo'
                         />
 
-                        <p className="xl:mt-5 lg:mt-6 xl:mb-3 lg:mb-4 my-5 xl:w-[235px] lg:w-auto md:w-72 text-[#e4e4e4] 
-                            xl:text-base lg:text-[15px] text-base font-light leading-[1.7] w-64"
+                        <p className="xl:mt-5 lg:mt-6 xl:mb-3 lg:mb-4 my-5 text-[#e4e4e4] xl:text-base lg:text-[15px] 
+                            text-base font-light leading-[1.7]"
                         >
-                            We are in business to provide client centric payment solutions. We serve most industries globally.
+                            We are in business to provide client centric payment solutions.
+                            <br />
+                            We serve most industries globally.
                         </p>
 
                         <div className="flex space-x-2">

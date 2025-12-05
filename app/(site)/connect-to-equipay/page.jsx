@@ -31,7 +31,7 @@ const ConnectToEquipay = () => {
             <section className="md:pt-20 pt-16 md:pb-14 pb-10 lg:px-24 sm:px-7 px-5">
                 <div className="container mx-auto">
                     <div className="max-w-[600px] mx-auto text-center" data-aos="flip-left">
-                        <h2 className="xl:text-[40px] lg:text-[34px] md:text-[40px] text-[26px] m-0 leading-[1.2] 
+                        <h2 className="xl:text-[40px] lg:text-[34px] sm:text-[40px] text-[26px] m-0 leading-[1.2] 
                             font-semibold text-[#212529]"
                         >
                             Seamless Integration
@@ -40,12 +40,12 @@ const ConnectToEquipay = () => {
                         <div className="mt-4 mb-5 flex justify-center">
                             <div className="relative w-[90px] h-1.5 bg-[#ef793c40] rounded-full">
                                 <div className="absolute left-0 -top-[2.6px] bg-[#ef793c] rounded-full
-                                animate-[MOVE-BG_3s_linear_infinite] w-[11px] h-[11px]"
+                                    animate-[MOVE-BG_3s_linear_infinite] w-[11px] h-[11px]"
                                 />
                             </div>
                         </div>
 
-                        <p className="md:px-10 text-sm md:text-base text-[#57647c] leading-[1.8]">
+                        <p className="text-[15px] sm:text-base xl:text-lg text-[#57647c] font-light leading-[1.7]">
                             Click below to know more.
                         </p>
                     </div>
@@ -54,20 +54,19 @@ const ConnectToEquipay = () => {
                         md:gap-y-5 sm:gap-3 gap-2 items-center" data-aos="zoom-in-up"
                     >
                         {INTEGRATIONS_ITEMS.map((item, index) => (
-                            <div key={index} className="md:p-5 p-3.5 max-h-max bg-[#F4F7FC] rounded-md transition group">
-                                <Link href='/connect-to-equipay' className="relative h-auto mx-auto flex items-center
-                                    justify-center overflow-hidden"
-                                >
-                                    <img src={item?.img} alt={item?.name} className="h-auto mx-auto transition-transform
+                            <Link key={index} href="/connect-to-equipay" className="block md:p-5 p-3.5 
+                                max-h-max bg-[#F4F7FC] rounded-md transition group cursor-pointer"
+                            >
+                                <div className="relative h-auto mx-auto flex items-center justify-center overflow-hidden">
+                                    <img src={item?.img} alt={item?.name} className="h-auto mx-auto transition-transform 
                                         transform translate-y-0 duration-300 group-hover:-translate-y-full"
                                     />
 
-                                    <img src={item?.scroll_img} alt={item?.name} className="h-auto 
-                                        mx-auto absolute transform translate-y-full transition-transform duration-300 
-                                        group-hover:translate-y-0"
+                                    <img src={item?.scroll_img} alt={item?.name} className="h-auto mx-auto absolute transform 
+                                        translate-y-full transition-transform duration-300 group-hover:translate-y-0"
                                     />
-                                </Link>
-                            </div>
+                                </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -77,7 +76,9 @@ const ConnectToEquipay = () => {
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 xl:gap-8 gap-6">
                         <div className="max-w-[600px] mx-auto text-center">
-                            <h2 className="md:text-[40px] text-[26px] m-0 leading-[1.2] font-semibold text-[#212529]">
+                            <h2 className="xl:text-[40px] lg:text-[34px] sm:text-[40px] text-[26px] m-0 leading-[1.2] 
+                                font-semibold text-[#212529]"
+                            >
                                 What customers say about us
                             </h2>
 
@@ -89,7 +90,7 @@ const ConnectToEquipay = () => {
                                 </div>
                             </div>
 
-                            <p className="text-[15px] md:text-base text-[#57647c] leading-[1.8]">
+                            <p className="text-[15px] sm:text-base xl:text-lg text-[#57647c] font-light leading-[1.7]">
                                 EquiPay is proud in showcasing the experiences of our clients from
                                 various segments of the industry.
                             </p>

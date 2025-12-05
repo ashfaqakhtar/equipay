@@ -20,7 +20,7 @@ const OurLocations = () => {
                                     {loc.city}
                                 </h4>
 
-                                <p className="mt-3 text-base leading-[1.8] text-[#57647c] font-light md:px-10 px-6">
+                                <p className="mt-3 text-base leading-[1.8] text-[#57647c] font-light">
                                     {loc.addressLine1}
                                     <br />
                                     {loc.addressLine2}
