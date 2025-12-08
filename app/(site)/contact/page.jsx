@@ -3,7 +3,7 @@
 import Link from "next/link";
 import * as Yup from "yup";
 import { Formik, Form } from "formik";
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import MyInput from "@/components/MyInput";
 import { MdLocationOn } from "react-icons/md";
 import { FaEnvelope, FaPhoneVolume } from "react-icons/fa";
@@ -24,10 +24,15 @@ const Contact = () => {
         resetForm();
     };
 
+    useEffect(() => {
+        document.title = "Contact – EquiPay";
+    }, []);
+
+
     return (
         <Fragment>
             <Head>
-                <title>Contact – EquiPay</title>
+                <title>{document.title}</title>
             </Head>
 
             <section className="md:pt-12 py-12 lg:px-24 sm:px-7 px-5 lg:pt-20 pt-16 md:pb-14 pb-10">

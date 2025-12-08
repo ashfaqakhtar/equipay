@@ -54,17 +54,18 @@ const ConnectToEquipay = () => {
                         md:gap-y-5 sm:gap-3 gap-2 items-center" data-aos="zoom-in-up"
                     >
                         {INTEGRATIONS_ITEMS.map((item, index) => (
-                            <Link key={index} href="/connect-to-equipay" className="block md:p-5 p-3.5 bg-[#F4F7FC] 
-                                rounded-md transition group cursor-pointer relative overflow-hidden"
+                            <Link key={index} href="/connect-to-equipay" className="block md:p-5 p-3.5 
+                                max-h-max bg-[#F4F7FC] rounded-md transition group cursor-pointer"
                             >
-                                <img src={item?.img} alt={item?.name} className="sm:max-w-[178px] h-auto mx-auto
-                                    duration-300 transition-transform group-hover:-translate-y-[200%] w-auto"
-                                />
+                                <div className="relative h-auto mx-auto flex items-center justify-center overflow-hidden">
+                                    <img src={item?.img} alt={item?.name} className="h-auto mx-auto transition-transform 
+                                        transform translate-y-0 duration-300 group-hover:-translate-y-full"
+                                    />
 
-                                <img src={item?.scroll_img} alt={item?.name} className="absolute top-1/2 left-1/2 h-auto
-                                    sm:max-w-[218px] -translate-x-1/2 translate-y-[200%] transition-transform duration-300
-                                    group-hover:-translate-y-1/2 w-[110px]"
-                                />
+                                    <img src={item?.scroll_img} alt={item?.name} className="h-auto mx-auto absolute transform 
+                                        translate-y-full transition-transform duration-300 group-hover:translate-y-0"
+                                    />
+                                </div>
                             </Link>
                         ))}
                     </div>
