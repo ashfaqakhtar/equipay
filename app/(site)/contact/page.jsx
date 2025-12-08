@@ -32,8 +32,10 @@ const Contact = () => {
 
             <section className="md:pt-12 py-12 lg:px-24 sm:px-7 px-5 lg:pt-20 pt-16 md:pb-14 pb-10">
                 <div className="container mx-auto">
-                    <div className="max-w-[600px] mx-auto text-center lg:pt-20 pt-16 ">
-                        <h2 className="md:text-[40px] text-[26px] m-0 leading-[1.2] font-semibold text-[#212529]">
+                    <div className="max-w-[600px] mx-auto text-center lg:pt-20 pt-16">
+                        <h2 className="xl:text-[40px] lg:text-[34px] sm:text-[40px] text-[26px] m-0 leading-[1.2] 
+                            font-semibold text-[#212529]"
+                        >
                             Let Us Talk
                         </h2>
 
@@ -45,7 +47,7 @@ const Contact = () => {
                             </div>
                         </div>
 
-                        <p className="md:px-10 text-base md:text-lg text-[#57647c] leading-[1.8]">
+                        <p className="md:px-3 text-[15px] sm:text-base xl:text-lg text-[#57647c] font-light leading-[1.7]">
                             Unsure what you are looking for ? Fill out our general contact form below.
                         </p>
                     </div>

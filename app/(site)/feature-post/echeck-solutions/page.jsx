@@ -10,6 +10,7 @@ import { Formik, Form } from 'formik';
 import * as Yup from "yup";
 import MyInput from '@/components/MyInput';
 import Head from 'next/head';
+import InfoSection from '@/components/InfoSection';
 
 const validationSchema = Yup.object({
     name: Yup.string().required("Name is required"),
@@ -36,50 +37,21 @@ const EcheckSolutions = () => {
             <section className="lg:px-24 sm:px-7 px-5 md:pt-7 pt-14 md:pb-14 pb-10">
                 <div className="container mx-auto">
                     <div className="grid grid-cols-12 gap-6 lg:gap-10 items-center">
-                        <div className="col-span-12 lg:col-span-6 lg:order-0 order-1" data-aos="fade-right">
-                            <img src="/assets/illustration.webp" alt="Illustration"
-                                className="w-full h-auto object-cover"
-                            />
-                        </div>
-
-                        <div className="col-span-12 lg:col-span-6 md:text-left text-center lg:order-1 order-0"
-                            data-aos="zoom-in"
-                        >
-                            <h2 className="xl:text-[40px] lg:text-[34px] sm:text-[40px] text-[26px] m-0 leading-[1.2] 
-                                font-semibold text-[#212529]"
-                            >
-                                eCheck Solutions
-                            </h2>
-
-                            <div className="mt-4 mb-5 flex md:justify-start justify-center ">
-                                <div className="relative w-[90px] h-1.5 bg-[#ef793c40] rounded-full">
-                                    <div className="absolute left-0 -top-[2.6px] bg-[#ef793c] rounded-full
-                                        animate-[MOVE-BG_3s_linear_infinite] w-[11px] h-[11px]"
-                                    />
-                                </div>
-                            </div>
-
-                            <p className="text-[15px] sm:text-base xl:text-lg text-[#57647c] font-light leading-[1.7]">
-                                We bring our merchants a range of solutions suitable for all risk categories from traditional
-                                & low risk to emerging & high risk. We specialize in cutting edge high risk solutions even
-                                for international merchants. Electronic check and ACH processing provide customers with
-                                another convenient way to pay. We offer an eCheck program that is a unique paperless checking
-                                solution that allows customers to make payments for purchases via their bank account rather
-                                than with a credit card.
-                            </p>
-                        </div>
+                        <InfoSection title="eCheck Solutions" image="/assets/illustration.webp" leftClass='lg:order-1 order-0'
+                            description={`We bring our merchants a range of solutions suitable for all risk categories from 
+                            traditional & low risk to emerging & high risk. We specialize in cutting edge high risk solutions 
+                            even for international merchants. Electronic check and ACH processing provide customers with another
+                            convenient way to pay. We offer an eCheck program that is a unique paperless checking solution that
+                            allows customers to make payments for purchases via their bank account rather than with a 
+                            credit card.`
+                            }
+                        />
                     </div>
 
-                    <div className="grid grid-cols-12 gap-6 lg:gap-10">
-                        <div className="col-span-12 lg:col-span-6 lg:space-y-4.5 space-y-3.5" data-aos="fade-right">
-                            <Accordion items={ECHECK_ITEMS} isFirstOpen={true} />
-                        </div>
-
-                        <div className="col-span-12 lg:col-span-6" data-aos="fade-right">
-                            <img src="/assets/artboard.webp" alt="Artboard"
-                                className="w-full h-auto object-cover"
-                            />
-                        </div>
+                    <div className="grid grid-cols-12 gap-6 lg:gap-10 items-center">
+                        <InfoSection title='Artboard' image="/assets/artboard.webp" showBar={false} showAccordion={true}
+                            showAccordionData={<Accordion items={ECHECK_ITEMS} isFirstOpen={true} />}
+                        />
                     </div>
                 </div>
             </section>
@@ -103,14 +75,12 @@ const EcheckSolutions = () => {
                             </p>
                         </div>
 
-                        <div className="border border-[#ef793c] bg-linear-to-r from-[#ef793c] to-[#ff6a00] 
-                            rounded-md text-base py-3 font-medium px-6 cursor-pointer inline-block md:my-0 mt-5"
-                            data-aos="fade-left"
+                        <Link href='/get-started' className="border border-[#ef793c] rounded-md text-base py-3 px-6
+                            font-medium cursor-pointer inline-block md:my-0 mt-5 text-white uppercase
+                            bg-linear-to-r from-[#ef793c] to-[#ff6a00]" data-aos="fade-left"
                         >
-                            <Link href='/get-started' className="text-white uppercase">
-                                Get Your EquiPay Account
-                            </Link>
-                        </div>
+                            Get Your EquiPay Account
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -118,40 +88,18 @@ const EcheckSolutions = () => {
             <section className="lg:px-24 sm:px-7 px-5 md:pt-20 pt-14 md:pb-14 pb-10">
                 <div className="container mx-auto">
                     <div className="grid grid-cols-12 gap-6 lg:gap-10 items-center">
-                        <div className="col-span-12 lg:col-span-6 md:text-left text-center" data-aos="zoom-in">
-                            <h2 className="xl:text-[40px] lg:text-[34px] sm:text-[40px] text-[26px] m-0 leading-[1.2] 
-                                font-semibold text-[#212529]"
-                            >
-                                Frequently asked questions
-                            </h2>
-
-                            <div className="mt-4 mb-5 flex md:justify-start justify-center ">
-                                <div className="relative w-[90px] h-1.5 bg-[#ef793c40] rounded-full">
-                                    <div className="absolute left-0 -top-[2.6px] bg-[#ef793c] rounded-full
-                                        animate-[MOVE-BG_3s_linear_infinite] w-[11px] h-[11px]"
-                                    />
-                                </div>
-                            </div>
-
-                            <p className="text-[15px] sm:text-base xl:text-lg text-[#57647c] font-light leading-[1.7]">
-                                Our team has put together the most commonly asked questions easy for you to refer. For any
-                                more clarifications kindly contact us.
-                            </p>
-
-                            <img src="/assets/faq.webp" alt="FAQ" className="w-full h-auto object-cover" />
-                        </div>
-
-                        <div className="col-span-12 lg:col-span-6 lg:space-y-4.5 space-y-3.5 lg:block hidden"
-                            data-aos="fade-left"
-                        >
-                            <Accordion items={FREQUENTLY_QUESTIONS} isFirstOpen={true} />
-                        </div>
+                        <InfoSection title='Frequently asked questions' image="/assets/faq.webp"
+                            accordionClass={'lg:block hidden'} showAccordion={true} showImage={false} contentImage={true}
+                            showAccordionData={<Accordion items={FREQUENTLY_QUESTIONS} isFirstOpen={true} />}
+                            aosAccordion={'fade-left'} description={`Our team has put together the most commonly asked questions 
+                                easy for you to refer. For any more clarifications kindly contact us.`}
+                        />
                     </div>
 
                     <div className="grid grid-cols-12 gap-6 lg:gap-10 md:pt-20 pt-14 lg:pb-0 pb-10">
                         <div className="col-span-12 lg:col-span-6" data-aos="zoom-in">
-                            <h2 className="xl:text-[40px] lg:text-[34px] sm:text-[40px] text-[26px] leading-[1.2] 
-                                font-semibold text-[#212529] md:text-left text-center m-0"
+                            <h2 className="xl:text-[40px] lg:text-[34px] sm:text-[40px] text-[26px] m-0 leading-[1.2] 
+                                font-semibold text-[#212529]"
                             >
                                 Still have questions?
                             </h2>
@@ -164,9 +112,7 @@ const EcheckSolutions = () => {
                                 </div>
                             </div>
 
-                            <p className="text-[15px] sm:text-base xl:text-lg text-[#57647c] font-light 
-                                leading-[1.7] md:text-left text-center"
-                            >
+                            <p className="text-[15px] sm:text-base xl:text-lg text-[#57647c] font-light leading-[1.7]">
                                 Get in touch with our merchant experts for all your needs, Equipay strives to deliver
                                 friendly reliable customer service.
                             </p>

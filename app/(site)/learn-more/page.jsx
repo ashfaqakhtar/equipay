@@ -179,7 +179,7 @@ const GetStarted = () => {
                     </div>
 
                     <div className="max-w-[600px] mx-auto text-center">
-                        <h2 className="xl:text-[40px] lg:text-[34px] md:text-[40px] text-[26px] m-0 leading-[1.2] 
+                        <h2 className="xl:text-[40px] lg:text-[34px] sm:text-[40px] text-[26px] m-0 leading-[1.2] 
                             font-semibold text-[#212529]"
                         >
                             Hard to Place? No Problem !
@@ -193,7 +193,7 @@ const GetStarted = () => {
                             </div>
                         </div>
 
-                        <p className="md:px-10 text-base md:text-lg text-[#57647c] leading-[1.8]">
+                        <p className="text-[15px] sm:text-base xl:text-lg text-[#57647c] font-light leading-[1.7]">
                             Not all businesses are created equal especially when it comes to banks. It’s important to
                             work with a merchant services company that understands your business type.
                         </p>
@@ -233,12 +233,12 @@ const GetStarted = () => {
                         <div className="mt-4 mb-5 flex justify-center">
                             <div className="relative w-[90px] h-1.5 bg-[#ef793c40] rounded-full">
                                 <div className="absolute left-0 -top-[2.6px] bg-[#ef793c] rounded-full
-                                animate-[MOVE-BG_3s_linear_infinite] w-[11px] h-[11px]"
+                                    animate-[MOVE-BG_3s_linear_infinite] w-[11px] h-[11px]"
                                 />
                             </div>
                         </div>
 
-                        <p className="md:px-10 text-base md:text-lg text-[#57647c] leading-[1.8]">
+                        <p className="md:px-3 text-[15px] sm:text-base xl:text-lg text-[#57647c] font-light leading-[1.7]">
                             Equipay is now powering businesses of all sizes with multiple 3rd party integrations.
                         </p>
                     </div>
@@ -247,20 +247,19 @@ const GetStarted = () => {
                         md:gap-y-5 sm:gap-3 gap-2 items-center" data-aos="zoom-in-up"
                     >
                         {INTEGRATIONS_ITEMS.map((item, index) => (
-                            <div key={index} className="md:p-5 p-3.5 max-h-max bg-[#F4F7FC] rounded-md transition group">
-                                <Link href='/connect-to-equipay' className="relative h-auto mx-auto flex items-center
-                                    justify-center overflow-hidden"
-                                >
-                                    <img src={item?.img} alt={item?.name} className="h-auto mx-auto transition-transform
+                            <Link key={index} href="/connect-to-equipay" className="block md:p-5 p-3.5 
+                                max-h-max bg-[#F4F7FC] rounded-md transition group cursor-pointer"
+                            >
+                                <div className="relative h-auto mx-auto flex items-center justify-center overflow-hidden">
+                                    <img src={item?.img} alt={item?.name} className="h-auto mx-auto transition-transform 
                                         transform translate-y-0 duration-300 group-hover:-translate-y-full"
                                     />
 
-                                    <img src={item?.scroll_img} alt={item?.name} className="h-auto 
-                                        mx-auto absolute transform translate-y-full transition-transform duration-300 
-                                        group-hover:translate-y-0"
+                                    <img src={item?.scroll_img} alt={item?.name} className="h-auto mx-auto absolute transform 
+                                        translate-y-full transition-transform duration-300 group-hover:translate-y-0"
                                     />
-                                </Link>
-                            </div>
+                                </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -277,12 +276,12 @@ const GetStarted = () => {
                             <div className="mt-4 mb-5 flex justify-center">
                                 <div className="relative w-[90px] h-1.5 bg-[#ef793c40] rounded-full">
                                     <div className="absolute left-0 -top-[2.6px] bg-[#ef793c] rounded-full
-                                            animate-[MOVE-BG_3s_linear_infinite] w-[11px] h-[11px]"
+                                        animate-[MOVE-BG_3s_linear_infinite] w-[11px] h-[11px]"
                                     />
                                 </div>
                             </div>
 
-                            <p className="text-[15px] md:text-base text-[#57647c] leading-[1.8]">
+                            <p className="text-[15px] sm:text-base xl:text-lg text-[#57647c] font-light leading-[1.7]">
                                 Equipay is proud in showcasing the experiences of our clients from various
                                 segments of the industry.
                             </p>

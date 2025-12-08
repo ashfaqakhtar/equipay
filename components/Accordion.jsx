@@ -51,10 +51,10 @@ const Accordion = ({ items = [], isFirstOpen = false }) => {
                         </div> */}
 
                         <div className={`${isOpen(index) ? "" : "border-t border-r border-b border-[#6c76861a]"}
-                            flex-1 py-[15px] pl-[60px] md:pr-4 pr-3 text-start`}
+                            flex-1 py-[15px] pl-[60px] md:pr-4 pr-3 text-start font-semibold`}
                         >
                             <h3 className="sm:text-[15px] md:leading-normal leading-none text-base font-medium
-                                hover:underline text-[#212529]"
+                                hover:underline text-black"
                             >
                                 {item?.title}
                             </h3>

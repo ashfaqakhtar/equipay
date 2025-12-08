@@ -53,7 +53,7 @@ const GetStarted = () => {
                         >
                             {(formik) => (
                                 <Form className="bg-[#F8F9FE] rounded-[10px] shadow-[0_0px_10px_0px_#00000080] 
-                                    lg:px-[22px] px-4.5 lg:py-[52px] py-11 space-y-5"
+                                    lg:px-[22px] px-4.5 lg:py-[52px] py-11 space-y-5" data-aos='fade-right'
                                 >
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                         <MyInput label="Name" name="name" placeholder="Name" required />
@@ -226,7 +226,9 @@ const GetStarted = () => {
                             )}
                         </Formik>
 
-                        <aside className="bg-[#F8F9FE] rounded-[10px] shadow-[0_0px_10px_0px_#00000080] p-[22px]">
+                        <aside className="bg-[#F8F9FE] rounded-[10px] shadow-[0_0px_10px_0px_#00000080] p-[22px]"
+                            data-aos='fade-left'
+                        >
                             <h3 className="text-xl font-semibold text-[#707070] leading-[1.4] xl:pr-16">
                                 Help Us Guide You To The Right Team
                             </h3>
@@ -321,19 +323,21 @@ const GetStarted = () => {
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 xl:gap-8 gap-6">
                         <div className="max-w-[600px] mx-auto text-center">
-                            <h2 className="md:text-[40px] text-[26px] m-0 leading-[1.2] font-semibold text-[#4f565b]">
+                            <h2 className="xl:text-[40px] lg:text-[34px] sm:text-[40px] text-[26px] m-0 leading-[1.2] 
+                                font-semibold text-[#4f565b]"
+                            >
                                 What customers say about us
                             </h2>
 
                             <div className="mt-4 mb-5 flex justify-center">
                                 <div className="relative w-[90px] h-1.5 bg-[#ef793c40] rounded-full">
                                     <div className="absolute left-0 -top-[2.6px] bg-[#ef793c] rounded-full
-                                            animate-[MOVE-BG_3s_linear_infinite] w-[11px] h-[11px]"
+                                        animate-[MOVE-BG_3s_linear_infinite] w-[11px] h-[11px]"
                                     />
                                 </div>
                             </div>
-
-                            <p className="text-sm md:text-base text-[#57647c] leading-[1.8]">
+                            
+                            <p className="text-[15px] sm:text-base xl:text-lg text-[#57647c] font-light leading-[1.7]">
                                 EquiPay is proud in showcasing the experiences of our clients from
                                 various segments of the industry.
                             </p>

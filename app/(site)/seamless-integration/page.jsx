@@ -35,7 +35,7 @@ const SeamlessIntegration = () => {
             <section className="lg:px-24 sm:px-7 px-5 md:pt-20 pt-16 md:pb-14 pb-10">
                 <div className="container mx-auto">
                     <div className="grid grid-cols-12 pt-12 items-center">
-                        <div className="col-span-12 lg:col-span-6" data-aos="zoom-in">
+                        <div className="col-span-12 lg:col-span-6" data-aos="fade-right">
                             <h4 className="text-[30px] m-0 leading-[1.2] font-semibold text-[#0887BE]">
                                 EquiPay Payment Integration
                             </h4>
@@ -66,16 +66,16 @@ const SeamlessIntegration = () => {
                     </div>
 
                     <div className="max-w-[750px] mx-auto md:pt-20 pt-16 pb-6">
-                        <h2 className="md:text-[40px] text-[26px] leading-[1.2] font-semibold text-[#212529] 
-                            text-center m-0"
+                        <h2 className="xl:text-[40px] lg:text-[34px] sm:text-[40px] text-[26px] m-0 leading-[1.2] 
+                            font-semibold text-[#212529] text-center"
                         >
                             Powering Your Shoppers
                         </h2>
 
-                        <div className="mt-5 mb-9 flex justify-center">
+                        <div className="mt-4 mb-5 flex justify-center">
                             <div className="relative w-[90px] h-1.5 bg-[#ef793c40] rounded-full">
                                 <div className="absolute left-0 -top-[2.6px] bg-[#ef793c] rounded-full
-                                animate-[MOVE-BG_3s_linear_infinite] w-[11px] h-[11px]"
+                                    animate-[MOVE-BG_3s_linear_infinite] w-[11px] h-[11px]"
                                 />
                             </div>
                         </div>

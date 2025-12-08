@@ -13,16 +13,12 @@ const Timeline = () => {
             <BannerSection title="Timeline" sub_title="We keep pushing the growth envelop higher each year." />
 
             <section className="lg:px-24 sm:px-7 px-5">
-                <div className='container mx-auto md:pt-20 pt-16'>
+                <div className='container mx-auto md:pt-20 pt-16 md:pb-14 pb-12'>
                     <img src="/assets/timeline_img.webp" alt="Timeline Img"
                         className="w-full h-auto object-cover"
                     />
-                </div>
-            </section>
 
-            <section className="md:pt-12 py-12 lg:px-24 sm:px-7 px-5">
-                <div className="container mx-auto">
-                    <div className="max-w-[600px] mx-auto text-center">
+                    <div className="max-w-[600px] mx-auto text-center md:pt-20 pt-16">
                         <h2 className="md:text-[40px] text-[26px] m-0 leading-[1.2] font-semibold text-[#212529]">
                             The EquiPay Difference
                         </h2>
@@ -40,7 +36,7 @@ const Timeline = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-3 xl:gap-8 lg:gap-5 gap-10 md:pt-20 pt-16 pb-10"
+                    <div className="grid grid-cols-1 lg:grid-cols-3 xl:gap-8 lg:gap-5 gap-10 pt-12"
                         data-aos='zoom-in-up'
                     >
                         <Accordion items={TIMELINES_ITEMS} />

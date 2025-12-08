@@ -51,7 +51,7 @@ const Home = () => {
                                     Read More
                                 </Link>
 
-                                  <Link href={item?.url} className="mt-5 mb-2 linear-gradient-text  
+                                <Link href={item?.url} className="mt-5 mb-2 linear-gradient-text  
                                     relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-px 
                                     after:w-0 after:bg-linear-to-r after:from-[#ef793c] after:to-[#ff6a00] inline-block
                                     after:transition-all after:duration-500 hover:after:w-full text-[16px] lg:hidden"
@@ -88,13 +88,13 @@ const Home = () => {
                                 </p>
                             </div>
 
-                            <div className="border border-[#ef793c] bg-linear-to-r from-[#ef793c] to-[#ff6a00] 
-                                rounded-md text-base py-3 font-medium px-6 cursor-pointer"
+
+                            <Link href='/contact' className="border border-[#ef793c] rounded-md text-base py-3 font-medium
+                                bg-linear-to-r from-[#ef793c] to-[#ff6a00] px-6 cursor-pointer text-white uppercase
+                                z-30"
                             >
-                                <Link href='/contact' className="text-white uppercase">
-                                    CONTACT US
-                                </Link>
-                            </div>
+                                CONTACT US
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -106,7 +106,9 @@ const Home = () => {
 
             <div className="md:pt-20 pt-16 md:pb-14 pb-10 bg-[#f7fafd] lg:-mt-[170px] sm:-mt-40 -mt-20">
                 <div className="max-w-[600px] mx-auto text-center px-4">
-                    <h2 className="md:text-[40px] text-[26px] m-0 leading-[1.2] font-semibold text-[#4f565b]">
+                    <h2 className="xl:text-[40px] lg:text-[34px] sm:text-[40px] text-[26px] m-0 leading-[1.2] 
+                        font-semibold text-[#4f565b]"
+                    >
                         What customers say about us
                     </h2>
 
@@ -118,7 +120,7 @@ const Home = () => {
                         </div>
                     </div>
 
-                    <p className="text-[15px] md:text-base text-[#57647c] leading-[1.8]">
+                    <p className="text-[15px] sm:text-base xl:text-lg text-[#57647c] font-light leading-[1.7]">
                         EquiPay is proud in showcasing the experiences of our clients from
                         various segments of the industry.
                     </p>
@@ -154,14 +156,12 @@ const Home = () => {
                             </p>
                         </div>
 
-                        <div className="border border-[#ef793c] bg-linear-to-r from-[#ef793c] to-[#ff6a00] 
-                            rounded-md text-base py-3 font-medium px-6 cursor-pointer inline-block md:my-0 mt-5"
-                            data-aos="fade-left"
+                        <Link href='/get-started' className="border border-[#ef793c] rounded-md text-base py-3 px-6
+                            font-medium cursor-pointer inline-block md:my-0 mt-5 text-white uppercase
+                            bg-linear-to-r from-[#ef793c] to-[#ff6a00]" data-aos="fade-left"
                         >
-                            <Link href='/get-started' className="text-white uppercase">
-                                Get Your EquiPay Account
-                            </Link>
-                        </div>
+                            Get Your EquiPay Account
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -192,20 +192,19 @@ const Home = () => {
                         md:gap-y-5 sm:gap-3 gap-2 items-center" data-aos="zoom-in-up"
                     >
                         {INTEGRATIONS_ITEMS.map((item, index) => (
-                            <div key={index} className="md:p-5 p-3.5 max-h-max bg-[#F4F7FC] rounded-md transition group">
-                                <Link href='/connect-to-equipay' className="relative h-auto mx-auto flex items-center
-                                    justify-center overflow-hidden"
-                                >
-                                    <img src={item?.img} alt={item?.name} className="h-auto mx-auto transition-transform
+                            <Link key={index} href="/connect-to-equipay" className="block md:p-5 p-3.5 
+                                max-h-max bg-[#F4F7FC] rounded-md transition group cursor-pointer"
+                            >
+                                <div className="relative h-auto mx-auto flex items-center justify-center overflow-hidden">
+                                    <img src={item?.img} alt={item?.name} className="h-auto mx-auto transition-transform 
                                         transform translate-y-0 duration-300 group-hover:-translate-y-full"
                                     />
 
-                                    <img src={item?.scroll_img} alt={item?.name} className="h-auto 
-                                        mx-auto absolute transform translate-y-full transition-transform duration-300 
-                                        group-hover:translate-y-0"
+                                    <img src={item?.scroll_img} alt={item?.name} className="h-auto mx-auto absolute transform 
+                                        translate-y-full transition-transform duration-300 group-hover:translate-y-0"
                                     />
-                                </Link>
-                            </div>
+                                </div>
+                            </Link>
                         ))}
                     </div>
                 </div>

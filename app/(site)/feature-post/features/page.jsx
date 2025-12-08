@@ -74,13 +74,12 @@ const Features = () => {
                         </div>
 
                         <div className='col-span-12 mx-auto' data-aos="zoom-in-up">
-                            <div className="border border-[#ef793c] bg-linear-to-r from-[#ef793c] to-[#ff6a00] 
-                                rounded-md text-base py-3 font-medium px-6 cursor-pointer inline-block lg:mt-0 mt-5"
+                            <Link href='tel:+1-866-232-4325' className="border border-[#ef793c] rounded-md text-base py-3 
+                                font-medium px-6 cursor-pointer inline-block lg:mt-0 mt-5 text-white uppercase hover:underline
+                                bg-linear-to-r from-[#ef793c] to-[#ff6a00]"
                             >
-                                <Link href='tel:+1-866-232-4325' className="text-white uppercase hover:underline">
-                                    SET UP A CALL
-                                </Link>
-                            </div>
+                                SET UP A CALL
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -107,14 +106,12 @@ const Features = () => {
                             </p>
                         </div>
 
-                        <div className="border border-[#ef793c] bg-linear-to-r from-[#ef793c] to-[#ff6a00] 
-                            rounded-md text-base py-3 font-medium px-6 cursor-pointer inline-block md:my-0 mt-5"
-                            data-aos="fade-left"
+                        <Link href='/get-started' className="border border-[#ef793c] rounded-md text-base py-3 px-6
+                            font-medium cursor-pointer inline-block md:my-0 mt-5 text-white uppercase
+                            bg-linear-to-r from-[#ef793c] to-[#ff6a00]" data-aos="fade-left"
                         >
-                            <Link href='/get-started' className="text-white uppercase">
-                                Get Your EquiPay Account
-                            </Link>
-                        </div>
+                            Get Your EquiPay Account
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -122,9 +119,7 @@ const Features = () => {
             <section className="md:pt-20 pt-16 md:pb-14 pb-10 lg:px-24 sm:px-7 px-5">
                 <div className="container mx-auto">
                     <div className="grid grid-cols-12 gap-6 lg:gap-10 items-center">
-                        <div className="col-span-12 lg:col-span-6 md:text-left text-center"
-                            data-aos="zoom-in"
-                        >
+                        <div className="col-span-12 lg:col-span-6 md:text-left text-center" data-aos="fade-right">
                             <h2 className="xl:text-[40px] lg:text-[34px] sm:text-[40px] text-[26px] m-0 leading-[1.2] 
                                 font-semibold text-[#212529]"
                             >
@@ -150,16 +145,15 @@ const Features = () => {
                                 payment products and services and accept payments across all platforms.
                             </p>
 
-                            <div className="border border-[#ef793c] bg-linear-to-r from-[#ef793c] to-[#ff6a00] 
-                                rounded-md text-base py-3 font-medium px-6 cursor-pointer inline-block mt-5"
+                            <Link href='/get-started' className="border border-[#ef793c] text-white uppercase mt-5
+                                rounded-md text-base py-3 font-medium px-6 cursor-pointer inline-block
+                                bg-linear-to-r from-[#ef793c] to-[#ff6a00] "
                             >
-                                <Link href='/get-started' className="text-white uppercase ">
-                                    Get Started
-                                </Link>
-                            </div>
+                                Get Started
+                            </Link>
                         </div>
 
-                        <div className="col-span-12 lg:col-span-6" data-aos="fade-right">
+                        <div className="col-span-12 lg:col-span-6" data-aos="fade-left">
                             <div className="relative z-10 text-center lg:mt-0 mt-12 md:block hidden">
                                 <div className='main-image'>
                                     <img src="/assets/banner_image_first.webp" alt="Hero Banner First"
@@ -194,7 +188,7 @@ const Features = () => {
                 </div>
             </section>
 
-            <div className='md:pb-14 pb-0 ' />
+            <div className='md:pb-14 pb-0' />
         </Fragment>
     )
 }
