@@ -114,7 +114,7 @@ const PaymentSection = () => {
                                     extraTitleClasses = "text-center";
                                 } else if (placement === "right") {
                                     titleStyle = {
-                                        left: "70px", top: "50%", textAlign: 'left',
+                                        left: "80px", top: "50%", textAlign: 'left',
                                         transform: "translateY(-50%)",
                                     };
                                     extraTitleClasses = "text-left";
@@ -144,7 +144,7 @@ const PaymentSection = () => {
                                             </div>
 
                                             <p className={`absolute xl:text-[20px] text-base leading-normal text-[#22307a] 
-                                                ${extraTitleClasses} md:w-[170px] lg:w-[200px] xl:w-[270px] md:block hidden 
+                                                ${extraTitleClasses} md:w-[179px] lg:w-[179px] xl:w-[270px] md:block hidden 
                                                 ${isHovered ? "text-[#ef793c]" : "text-[#22307a]"}`} style={titleStyle}
                                             >
                                                 {titles[index]}
@@ -154,14 +154,16 @@ const PaymentSection = () => {
                                 )
                             })}
 
-                            <div className="absolute xl:inset-[12%] lg:inset-[10%] sm:inset-[12%] inset-[14%] rounded-full overflow-hidden">
+                            <div className="absolute xl:inset-[12%] lg:inset-[10%] sm:inset-[12%] inset-[14%] rounded-full 
+                                overflow-hidden"
+                            >
                                 <div className="relative w-full h-full flex items-center justify-center">
                                     <div className="absolute inset-0 bg-center bg-cover
                                         bg-[url('/assets/Qwebsite.webp')]"
                                     />
 
                                     <div className="relative z-10 px-6 text-center text-[#ef793c]">
-                                        <p className={`text-[22px] sm:text-[26px] lg:text-[32px] font-semibold leading-tight 
+                                        <p className={`text-[22px] sm:text-[26px] lg:text-[35px] font-semibold leading-tight 
                                             transition-opacity duration-300 ${visible ? "opacity-100" : "opacity-0"}`}
                                         >
                                             {words[index]}
