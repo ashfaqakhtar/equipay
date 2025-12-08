@@ -188,7 +188,7 @@ const Home = () => {
                         </p>
                     </div>
 
-                    {/* <div className="mt-9 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 md:gap-x-3 
+                    <div className="mt-9 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 md:gap-x-3 
                         md:gap-y-5 sm:gap-3 gap-2 items-center" data-aos="zoom-in-up"
                     >
                         {INTEGRATIONS_ITEMS.map((item, index) => (
@@ -206,9 +206,9 @@ const Home = () => {
                                 </div>
                             </Link>
                         ))}
-                    </div> */}
+                    </div>
 
-                    <div className="mt-9 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 md:gap-x-3 
+                    {/* <div className="mt-9 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 md:gap-x-3 
                         md:gap-y-5 sm:gap-3 gap-2 items-center" data-aos="zoom-in-up"
                     >
                         {INTEGRATIONS_ITEMS.map((item, index) => (
@@ -216,16 +216,16 @@ const Home = () => {
                                 rounded-md transition group cursor-pointer relative overflow-hidden"
                             >
                                 <img src={item?.img} alt={item?.name} className="sm:max-w-[178px] h-auto mx-auto
-                                    duration-300 transition-transform group-hover:-translate-y-[200%] max-w-auto"
+                                    duration-300 transition-transform group-hover:-translate-y-[200%] max-w-[110px]"
                                 />
 
                                 <img src={item?.scroll_img} alt={item?.name} className="absolute top-1/2 left-1/2 h-auto
                                     sm:max-w-[218px] -translate-x-1/2 translate-y-[200%] transition-transform duration-300
-                                    group-hover:-translate-y-1/2 max-w-[110px]"
+                                    group-hover:-translate-y-1/2 max-w-[180px]"
                                 />
                             </Link>
                         ))}
-                    </div>
+                    </div> */}
                 </div>
             </section>
         </Fragment>
