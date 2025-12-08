@@ -3,7 +3,7 @@
 import Link from "next/link";
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment } from "react";
 import { FaCheck, FaCheckCircle } from "react-icons/fa";
 import Testimonials from "@/components/Testimonials";
 import { BUSINESS_TYPES, GET_APPROVED } from "@/utils/staticData";
@@ -22,17 +22,13 @@ const GetStarted = () => {
         resetForm();
     };
 
-    useEffect(() => {
-        document.title = "Learn More – EquiPay";
-    }, []);
-
     const baseClass = `w-full rounded-sm bg-white text-[#333] h-[38px] font-semibold text-base leading-1.5 
         px-3.5 pt-1 pb-1.5 outline-none focus:ring-2 focus:ring-[#ff7a21]`
 
     return (
         <Fragment>
             <Head>
-                <title>{document?.title}</title>
+                <title>Learn More – EquiPay</title>
             </Head>
 
             <section className="md:pt-20 pt-16 md:pb-14 pb-10 lg:px-24 sm:px-7 px-5">
