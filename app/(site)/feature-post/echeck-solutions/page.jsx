@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link'
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
 import BannerSection from '@/components/BannerSection'
 import Accordion from '@/components/Accordion'
 import { FREQUENTLY_QUESTIONS } from '@/utils/staticData'
@@ -11,6 +11,8 @@ import * as Yup from "yup";
 import MyInput from '@/components/MyInput';
 import Head from 'next/head';
 import InfoSection from '@/components/InfoSection';
+import toast from 'react-hot-toast';
+import emailjs from "@emailjs/browser";
 
 const validationSchema = Yup.object({
     name: Yup.string().required("Name is required"),
@@ -21,9 +23,34 @@ const validationSchema = Yup.object({
 });
 
 const EcheckSolutions = () => {
-    const handleSubmit = (values, { resetForm }) => {
-        console.log("FORM DATA:", values);
-        resetForm();
+    const [loading, setLoading] = useState(false);
+
+    const handleSubmit = async (values, { resetForm }) => {
+
+        setLoading(true);
+        const templateParams = {
+            full_name: values.name,
+            email: values.email,
+            phone: values.phone,
+            subject: values.subject,
+            message: values.message,
+            agree: values.agree ? "Yes" : "No",
+        };
+
+        try {
+            const response = await emailjs.send(
+                "service_ul8452j", "template_wmtsfi9", templateParams, "2EjYyADHH1E7k5FjG",
+            );
+
+            if (response.status === 200) {
+                resetForm();
+                toast.success("Email Sent Successfully");
+            }
+        } catch (error) {
+            toast.error("Somthing Went Wrong");
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -165,7 +192,21 @@ const EcheckSolutions = () => {
                                             <button type="submit" className="cursor-pointer rounded-md px-8 py-3
                                                 linear-gradient text-sm sm:text-base font-semibold text-white"
                                             >
-                                                SEND MESSAGE
+                                                {loading ? (
+                                                    <div className="flex items-center gap-2.5">
+                                                        <svg className="w-7 h-7 animate-spin text-white" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        >
+                                                            <circle className="opacity-25" cx="12" cy="12" r="10"
+                                                                stroke="currentColor" strokeWidth="3"
+                                                            />
+                                                            <path className="opacity-75" fill="none" stroke="currentColor"
+                                                                strokeLinecap="round" strokeWidth="3" d="M22 12a10 10 0 01-10 10"
+                                                            />
+                                                        </svg>
+                                                        <span className="text-white">Sending...</span>
+                                                    </div>
+                                                ) : "SEND MESSAGE"}
                                             </button>
                                         </div>
                                     </Form>
