@@ -122,7 +122,7 @@ const ApplyNow = () => {
                                     </div>
 
                                     <div className="my-9 overflow-hidden">
-                                        <HCaptcha ref={captchaRef} sitekey={process.env.HCAPTCHA_SITEKEY}
+                                        <HCaptcha ref={captchaRef} sitekey='aec4547e-2972-4088-b6fe-04d82600855a'
                                             onVerify={(token) => setFieldValue("hcaptcha", token)}
                                             onExpire={() => setFieldValue("hcaptcha", "")}
                                         />
