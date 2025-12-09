@@ -3,12 +3,14 @@
 import Link from "next/link";
 import * as Yup from "yup";
 import { Formik, Form } from "formik";
-import React, { Fragment } from "react";
+import React, { Fragment, useRef, useState } from "react";
 import MyInput from "@/components/MyInput";
 import { MdLocationOn } from "react-icons/md";
 import { FaEnvelope, FaPhoneVolume } from "react-icons/fa";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import Head from "next/head";
+import toast from "react-hot-toast";
+import emailjs from "@emailjs/browser";
 
 const validationSchema = Yup.object({
     name: Yup.string().required("Name is required"),
@@ -19,9 +21,41 @@ const validationSchema = Yup.object({
 });
 
 const Contact = () => {
-    const handleSubmit = (values, { resetForm }) => {
-        console.log("FORM DATA:", values);
-        resetForm();
+    const [loading, setLoading] = useState(false);
+    const captchaRef = useRef(null);
+
+    const handleSubmit = async (values, { resetForm, setFieldValue }) => {
+
+        setLoading(true);
+        const templateParams = {
+            full_name: values.name,
+            email: values.email,
+            phone: values.phone,
+            subject: values.subject,
+            message: values.message,
+            discountCode: values.discountCode,
+            agree: values.agree ? "Yes" : "No",
+        };
+
+        try {
+            const response = await emailjs.send(
+                "service_ul8452j", "template_wmtsfi9", templateParams, "2EjYyADHH1E7k5FjG",
+            );
+
+            if (response.status === 200) {
+                resetForm();
+                setFieldValue("hcaptcha", "");
+
+                if (captchaRef.current) {
+                    captchaRef.current.resetCaptcha();
+                }
+                toast.success("Email Sent Successfully");
+            }
+        } catch (error) {
+            toast.error("Somthing Went Wrong");
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -61,7 +95,7 @@ const Contact = () => {
                                 discountCode: "", agree: false, hcaptcha: "",
                             }}
                         >
-                            {(formik) => (
+                            {({ setFieldValue, touched, errors, submitCount, handleChange, values }) => (
                                 <Form className="bg-[#F8F9FE] rounded-[10px] shadow-[0_0px_10px_0px_#00000080] lg:px-[22px] 
                                     px-4.5 lg:py-[52px] py-11 space-y-5"
                                 >
@@ -84,8 +118,8 @@ const Contact = () => {
                                     </div>
 
                                     <div className="flex items-start gap-2">
-                                        <input id="agree" type="checkbox" name="agree" checked={formik.values.agree}
-                                            onChange={formik.handleChange} className="md:mt-1 h-5 w-5 border-[#d0d0e0]
+                                        <input id="agree" type="checkbox" name="agree" checked={values.agree}
+                                            onChange={handleChange} className="md:mt-1 h-5 w-5 border-[#d0d0e0]
                                             rounded mt-1.5 text-[#ef793c] focus:ring-[#ef793c]"
                                         />
 
@@ -109,12 +143,13 @@ const Contact = () => {
                                     </div>
 
                                     <div className="my-9 overflow-hidden">
-                                        <HCaptcha sitekey="YOUR_HCAPTCHA_SITE_KEY"
+                                        <HCaptcha ref={captchaRef} sitekey='aec4547e-2972-4088-b6fe-04d82600855a'
                                             onVerify={(token) => setFieldValue("hcaptcha", token)}
+                                            onExpire={() => setFieldValue("hcaptcha", "")}
                                         />
 
-                                        {formik.errors.hcaptcha && (
-                                            <p className="mt-1 text-base text-[#ff0000]">{formik.errors.hcaptcha}</p>
+                                        {(touched.hcaptcha || submitCount > 0) && (
+                                            <p className="mt-1 text-base text-[#ff0000]">{errors.hcaptcha}</p>
                                         )}
                                     </div>
 
@@ -122,7 +157,21 @@ const Contact = () => {
                                         <button type="submit" className="cursor-pointer rounded-md px-8 py-3
                                             linear-gradient text-sm sm:text-base font-semibold text-white"
                                         >
-                                            SUBMIT
+                                            {loading ? (
+                                                <div className="flex items-center gap-2.5">
+                                                    <svg className="w-7 h-7 animate-spin text-white" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    >
+                                                        <circle className="opacity-25" cx="12" cy="12" r="10"
+                                                            stroke="currentColor" strokeWidth="3"
+                                                        />
+                                                        <path className="opacity-75" fill="none" stroke="currentColor"
+                                                            strokeLinecap="round" strokeWidth="3" d="M22 12a10 10 0 01-10 10"
+                                                        />
+                                                    </svg>
+                                                    <span className="text-white">Sending...</span>
+                                                </div>
+                                            ) : "SUBMIT"}
                                         </button>
                                     </div>
                                 </Form>

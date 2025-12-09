@@ -3,12 +3,14 @@
 import Link from "next/link";
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { FaCheck, FaCheckCircle } from "react-icons/fa";
 import Testimonials from "@/components/Testimonials";
 import { BUSINESS_TYPES, GET_APPROVED } from "@/utils/staticData";
 import { INTEGRATIONS_ITEMS, LEARN_MORE } from "@/utils/staticData";
 import Head from "next/head";
+import toast from "react-hot-toast";
+import emailjs from "@emailjs/browser";
 
 const validationSchema = Yup.object({
     company_name: Yup.string().required("Company Name is required"),
@@ -16,10 +18,34 @@ const validationSchema = Yup.object({
     email: Yup.string().email("Invalid email").required("Email is required"),
 });
 
-const GetStarted = () => {
-    const handleSubmit = (values, { resetForm }) => {
-        console.log("FORM DATA:", values);
-        resetForm();
+const LearnMore = () => {
+    const [loading, setLoading] = useState(false);
+
+    const handleSubmit = async (values, { resetForm }) => {
+        setLoading(true);
+        const templateParams = {
+            company_name: values.company_name,
+            email: values.email,
+            phone: values.phone,
+            number_of_employee: values.number_of_employee,
+            gross_turnover: values.gross_turnover,
+            industry_type: values.industry_type,
+        };
+
+        try {
+            const response = await emailjs.send(
+                "service_ul8452j", "template_wmtsfi9", templateParams, "2EjYyADHH1E7k5FjG",
+            );
+
+            if (response.status === 200) {
+                resetForm();
+                toast.success("Email Sent Successfully");
+            }
+        } catch (error) {
+            toast.error("Somthing Went Wrong");
+        } finally {
+            setLoading(false);
+        }
     };
 
     const baseClass = `w-full rounded-sm bg-white text-[#333] h-[38px] font-semibold text-base leading-1.5 
@@ -150,7 +176,22 @@ const GetStarted = () => {
                                                 <button type="submit" className="cursor-pointer rounded-md px-7 py-2
                                                     linear-gradient text-sm sm:text-base font-semibold text-white"
                                                 >
-                                                    SUBMIT
+                                                    {loading ? (
+                                                        <div className="flex items-center gap-2.5">
+                                                            <svg className="w-7 h-7 animate-spin text-white" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                            >
+                                                                <circle className="opacity-25" cx="12" cy="12" r="10"
+                                                                    stroke="currentColor" strokeWidth="3"
+                                                                />
+                                                                <path className="opacity-75" fill="none" stroke="currentColor"
+                                                                    strokeLinecap="round" strokeWidth="3"
+                                                                    d="M22 12a10 10 0 01-10 10"
+                                                                />
+                                                            </svg>
+                                                            <span className="text-white">Sending...</span>
+                                                        </div>
+                                                    ) : "SUBMIT"}
                                                 </button>
                                             </div>
                                         </Form>
@@ -297,4 +338,4 @@ const GetStarted = () => {
     )
 }
 
-export default GetStarted
+export default LearnMore
