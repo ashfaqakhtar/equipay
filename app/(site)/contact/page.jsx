@@ -143,7 +143,7 @@ const Contact = () => {
                                     </div>
 
                                     <div className="my-9 overflow-hidden">
-                                        <HCaptcha ref={captchaRef} sitekey="79140b96-e77e-410e-9bfe-7fdcca12d44e"
+                                        <HCaptcha ref={captchaRef} sitekey={process.env.HCAPTCHA_SITEKEY}
                                             onVerify={(token) => setFieldValue("hcaptcha", token)}
                                             onExpire={() => setFieldValue("hcaptcha", "")}
                                         />
