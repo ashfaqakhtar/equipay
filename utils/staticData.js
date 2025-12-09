@@ -689,5 +689,3 @@ export const PAYMENT_PLATFORM = [
         ],
     },
 ];
-
-// h-captcha = 'ES_ff3945385e4f4067b83c060a1d146d66'
