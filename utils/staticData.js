@@ -529,50 +529,163 @@ export const GET_APPROVED = [
     "Zero application or setup fees when working with us. We don’t believe in the nickel and dime approach when it comes to our customers. We treat them how we would want to be treated",
 ];
 
+export const PAYMENT_TITLES = [
+    {
+        title: "One account connected to a network of global banks",
+        image: [
+            { icon: "/icons/one_account/icon_1.svg" },
+            { icon: "/icons/one_account/icon_2.svg" },
+        ],
+    },
+    {
+        title: "Intelligent payment routing to optimize authorization & cost",
+        image: [
+            { icon: "/icons/intelligent_payment/icon_1.svg" },
+            { icon: "/icons/intelligent_payment/icon_2.svg" },
+            { icon: "/icons/intelligent_payment/icon_3.svg" },
+            { icon: "/icons/intelligent_payment/icon_4.svg" },
+        ],
+    },
+    {
+        title: "100+ shopper currencies & 17 settlement currencies",
+        image: [
+            { icon: "/icons/settlement_currencies/icon_1.svg" },
+            { icon: "/icons/settlement_currencies/icon_2.svg" },
+            { icon: "/icons/settlement_currencies/icon_3.svg" },
+        ],
+    },
+    {
+        title: "100+ global payment types & eWallets to convert more shoppers",
+        image: [
+            { icon: "/icons/eWallets/icon_1.svg" },
+            { icon: "/icons/eWallets/icon_2.svg" },
+            { icon: "/icons/eWallets/icon_3.svg" },
+            { icon: "/icons/eWallets/icon_4.svg" },
+        ],
+    },
+    {
+        title: "Automated accounts receivable",
+        image: [
+            { icon: "/icons/automated_accounts_receivable/icon_1.svg" },
+            { icon: "/icons/automated_accounts_receivable/icon_2.svg" },
+        ],
+    },
+    {
+        title: "Integrated fraud & chargeback management",
+        image: [
+            { icon: "/icons/chargeback_management/icon_1.svg" },
+            { icon: "/icons/chargeback_management/icon_2.svg" },
+            { icon: "/icons/chargeback_management/icon_3.svg" },
+            { icon: "/icons/chargeback_management/icon_4.svg" },
+        ],
+    },
+    {
+        title: "Built-in solutions for regulation & tax compliance",
+        image: [
+            { icon: "/icons/tax_compliance/icon_1.svg" },
+            { icon: "/icons/tax_compliance/icon_2.svg" },
+            { icon: "/icons/tax_compliance/icon_3.svg" },
+            { icon: "/icons/tax_compliance/icon_4.svg" },
+        ],
+    },
+    {
+        title: "Reporting to increase visibility & simplify reconciliation",
+        image: [
+            { icon: "/icons/simplify_reconciliation/icon_1.svg" },
+            { icon: "/icons/simplify_reconciliation/icon_2.svg" },
+            { icon: "/icons/simplify_reconciliation/icon_3.svg" },
+            { icon: "/icons/simplify_reconciliation/icon_4.svg" },
+        ],
+    },
+];
+
 export const PAYMENT_PLATFORM = [
     {
         id: 1,
         img: "/icons/first_icon.png",
         title: "One account connected to",
         sub_title: "a network of global banks",
+        image: [
+            { icon: "/icons/one_account/icon_1.svg" },
+            { icon: "/icons/one_account/icon_2.svg" },
+        ],
     },
     {
         id: 2,
         img: "/icons/second_icon.png",
         sub_title: "Intelligent payment routing to optimize authorization & cost",
+        image: [
+            { icon: "/icons/intelligent_payment/icon_1.svg" },
+            { icon: "/icons/intelligent_payment/icon_2.svg" },
+            { icon: "/icons/intelligent_payment/icon_3.svg" },
+            { icon: "/icons/intelligent_payment/icon_4.svg" },
+        ],
     },
     {
         id: 3,
         img: "/icons/three_icon.png",
         title: "100+ shopper currencies",
         sub_title: "& 17 settlement currencies",
+        image: [
+            { icon: "/icons/settlement_currencies/icon_1.svg" },
+            { icon: "/icons/settlement_currencies/icon_2.svg" },
+            { icon: "/icons/settlement_currencies/icon_3.svg" },
+        ],
     },
     {
         id: 4,
         img: "/icons/fourth_icon.png",
         title: "100+ global payment types",
         sub_title: "& eWallets to convert more shoppers",
+        image: [
+            { icon: "/icons/eWallets/icon_1.svg" },
+            { icon: "/icons/eWallets/icon_2.svg" },
+            { icon: "/icons/eWallets/icon_3.svg" },
+            { icon: "/icons/eWallets/icon_4.svg" },
+        ],
     },
     {
         id: 5,
         img: "/icons/fifth_icon.png",
         title: "Automated accounts receivable",
+        image: [
+            { icon: "/icons/automated_accounts_receivable/icon_1.svg" },
+            { icon: "/icons/automated_accounts_receivable/icon_2.svg" },
+        ],
     },
     {
         id: 6,
         img: "/icons/sixth_icon.png",
         title: "Integrated fraud &",
         sub_title: "chargeback management",
+        image: [
+            { icon: "/icons/chargeback_management/icon_1.svg" },
+            { icon: "/icons/chargeback_management/icon_2.svg" },
+            { icon: "/icons/chargeback_management/icon_3.svg" },
+            { icon: "/icons/chargeback_management/icon_4.svg" },
+        ],
     },
     {
         id: 7,
         img: "/icons/seventh_icon.png",
         title: "Built-in solutions for regulation &",
         sub_title: "tax compliance",
+        image: [
+            { icon: "/icons/tax_compliance/icon_1.svg" },
+            { icon: "/icons/tax_compliance/icon_2.svg" },
+            { icon: "/icons/tax_compliance/icon_3.svg" },
+            { icon: "/icons/tax_compliance/icon_4.svg" },
+        ],
     },
     {
         id: 8,
         img: "/icons/eight_icon.png",
         title: "Reporting to increase visibility & simplify reconciliation",
+        image: [
+            { icon: "/icons/simplify_reconciliation/icon_1.svg" },
+            { icon: "/icons/simplify_reconciliation/icon_2.svg" },
+            { icon: "/icons/simplify_reconciliation/icon_3.svg" },
+            { icon: "/icons/simplify_reconciliation/icon_4.svg" },
+        ],
     },
 ];

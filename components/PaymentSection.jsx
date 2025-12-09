@@ -1,6 +1,6 @@
 "use client";
 
-import { PAYMENT_PLATFORM } from "@/utils/staticData";
+import { PAYMENT_PLATFORM, PAYMENT_TITLES } from "@/utils/staticData";
 import { useEffect, useState } from "react";
 
 const words = ["Payments", "Power-Up", "Your"];
@@ -38,17 +38,6 @@ const hover_icons = [
     "/icons/hover_icon_8.png",
 ]
 
-const titles = [
-    "One account connected to a network of global banks",
-    "Intelligent payment routing to optimize authorization & cost",
-    "100+ shopper currencies & 17 settlement currencies",
-    "100+ global payment types & eWallets to convert more shoppers",
-    "Automated accounts receivable",
-    "Integrated fraud & chargeback management",
-    "Built-in solutions for regulation & tax compliance",
-    "Reporting to increase visibility & simplify reconciliation",
-];
-
 const textPlacement = [
     "top",
     "right",
@@ -78,12 +67,17 @@ const PaymentSection = () => {
         return () => clearInterval(interval);
     }, []);
 
+    const featureItems = PAYMENT_TITLES?.map((item, index) => ({
+        title: item.title,
+        iconDefault: item?.image,
+    }));
+
     return (
         <section className="bg-[#F0FFFF]">
-            <div className="lg:px-24 sm:px-7 px-5 py-12 md:pt-16 md:pb-32 pb-0">
+            <div className="lg:px-24 sm:px-7 px-5 py-12 md:pt-16 md:pb-40 pb-0">
                 <div className="container mx-auto">
                     <h2 className="text-center md:text-[40px] text-[26px] leading-[1.2] font-semibold text-[#4f565b] 
-                        lg:pb-18 md:pb-16 pb-0 m-0"
+                        md:pb-24 pb-0 m-0"
                     >
                         Next Generation of Payment Platform
                     </h2>
@@ -102,7 +96,7 @@ const PaymentSection = () => {
 
                                 if (placement === "top") {
                                     titleStyle = {
-                                        top: "-60px", left: "50%", textAlign: 'center',
+                                        top: "-95px", left: "50%", textAlign: 'center',
                                         transform: "translateX(-50%)",
                                     };
                                     extraTitleClasses = "text-center"
@@ -126,6 +120,9 @@ const PaymentSection = () => {
                                     extraTitleClasses = "text-right";
                                 }
 
+                                const feature = featureItems[index]
+                                const featureImage = featureItems[index]
+
                                 return (
                                     <div key={index} className="absolute z-20" style={{
                                         top: pos.top, left: pos.left, transform: "translate(-50%, -50%)",
@@ -143,12 +140,24 @@ const PaymentSection = () => {
                                                 />
                                             </div>
 
-                                            <p className={`absolute xl:text-[20px] text-base leading-normal text-[#22307a] 
-                                                ${extraTitleClasses} md:w-[179px] lg:w-[179px] xl:w-[270px] md:block hidden 
-                                                ${isHovered ? "text-[#ef793c]" : "text-[#22307a]"}`} style={titleStyle}
-                                            >
-                                                {titles[index]}
-                                            </p>
+                                            <div className={`absolute md:block hidden ${extraTitleClasses}`} style={titleStyle}>
+                                                <p className={`xl:text-[20px] lg:text-base leading-normal text-[#22307a]
+                                                    ${isHovered ? "text-[#ef793c]" : "text-[#22307a]"} md:w-[170px] 
+                                                    lg:w-[179px] xl:w-[270px] text-sm`}
+                                                >
+                                                    {feature.title}
+                                                </p>
+
+                                                {featureImage?.iconDefault && featureImage.iconDefault.length > 0 && (
+                                                    <div className="flex items-center justify-center lg:mt-2 mt-1 gap-2">
+                                                        {featureImage?.iconDefault?.map((data, idx) => (
+                                                            <img key={idx} src={data?.icon} alt={`Icon ${idx + 1}`}
+                                                                className="lg:w-[30px] w-6 h-auto"
+                                                            />
+                                                        ))}
+                                                    </div>
+                                                )}
+                                            </div>
                                         </div>
                                     </div>
                                 )
@@ -201,6 +210,16 @@ const PaymentSection = () => {
                                                     <p className="text-white text-sm sm:text-lg font-light leading-[1.6]">
                                                         {item?.sub_title}
                                                     </p>
+                                                )}
+
+                                                {item?.image && item.image.length > 0 && (
+                                                    <div className="flex mt-2 gap-2">
+                                                        {item?.image?.map((data, idx) => (
+                                                            <div className="inline-block" key={idx}>
+                                                                <img src={data.icon} className={`sm:w-[30px] w-7 h-auto`} />
+                                                            </div>
+                                                        ))}
+                                                    </div>
                                                 )}
                                             </div>
                                         </div>
