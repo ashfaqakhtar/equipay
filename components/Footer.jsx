@@ -84,12 +84,12 @@ const Footer = () => {
                                 </span>
                             </Link>
 
-                            <Link href='mailto:help@equipay.com' target='_blank' className={`relative text-[#e4e4e4] 
+                            <Link href='mailto:help@equipay.co' target='_blank' className={`relative text-[#e4e4e4] 
                                 leading-[1.8] mb-3 text-base font-light flex gap-2`}
                             >
                                 <FaRegEnvelope size={20} className="text-[#ef793c] mt-[5px]" />
                                 <span className="hover:underline hover:text-[#ef793c]">
-                                    help@equipay.com
+                                    help@equipay.co
                                 </span>
                             </Link>
 

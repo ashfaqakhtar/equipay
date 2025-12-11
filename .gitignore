@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/mail
 /.pnp
 .pnp.*
 .yarn/*
