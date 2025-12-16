@@ -86,25 +86,17 @@ const ApplyNow = () => {
                 <title>Apply For a New Merchant Account – EquiPay</title>
             </Head>
 
-            <BannerSection
-                title="Apply For a New Merchant Account"
-                sub_title="Accept payments seamlessly with EquiPay's proprietary system and Power-up your business like never before"
+            <BannerSection title="Apply For a New Merchant Account" sub_title="Accept payments seamlessly with EquiPay's 
+                proprietary system and Power-up your business like never before"
             />
 
             <section className="md:pt-12 py-12 lg:px-24 sm:px-7 px-5 lg:pt-20 pt-16 md:pb-14 pb-10">
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 xl:gap-8 gap-6 xl:max-w-5xl mx-auto">
-                        <Formik
-                            validationSchema={validationSchema}
-                            onSubmit={handleSubmit}
+                        <Formik validationSchema={validationSchema} onSubmit={handleSubmit}
                             initialValues={{
-                                full_name: "",
-                                business_name: "",
-                                email: "",
-                                phone: "",
-                                address: "",
-                                agree: false,
-                                hcaptcha: "",
+                                full_name: "", business_name: "", email: "", phone: "",
+                                address: "", agree: false, hcaptcha: "",
                             }}
                         >
                             {({ setFieldValue, touched, errors, submitCount, handleChange, values }) => (
@@ -121,39 +113,35 @@ const ApplyNow = () => {
                                         <MyInput label="Phone" name="phone" type="phone" placeholder="Phone" required />
                                     </div>
 
-                                    <MyInput
-                                        label="Address"
-                                        name="address"
-                                        type="textarea"
-                                        placeholder="Address"
-                                        required
-                                        rows={4}
+                                    <MyInput label="Address" name="address" type="textarea" placeholder="Address"
+                                        required rows={4}
                                     />
 
                                     <div className="flex flex-col items-start gap-2">
                                         <div className="flex items-start gap-2">
-                                            <input
-                                                id="agree"
-                                                type="checkbox"
-                                                name="agree"
-                                                checked={values.agree}
-                                                onChange={handleChange}
-                                                className="md:mt-1 h-5 w-5 border-[#d0d0e0] rounded mt-1.5 text-[#ef793c] focus:ring-[#ef793c]"
+                                            <input id="agree" type="checkbox" name="agree" checked={values.agree}
+                                                onChange={handleChange} className="md:mt-1 h-5 w-5 border-[#d0d0e0] rounded 
+                                                mt-1.5 text-[#ef793c] focus:ring-[#ef793c]"
                                             />
 
                                             <label htmlFor="agree" className='text-base text-[#57647c] leading-[1.8]'>
                                                 By checking this, you agree to our{" "}
-                                                <Link href='/terms-conditions' target="_blank" className="hover:underline cursor-pointer text-[#0887be]">
+                                                <Link href='/terms-conditions' target="_blank" className="hover:underline 
+                                                    cursor-pointer text-[#0887be]"
+                                                >
                                                     Terms
                                                 </Link>{" "}
+
                                                 and{" "}
-                                                <Link href='/privacy-policy' target="_blank" className="hover:underline cursor-pointer text-[#0887be]">
+
+                                                <Link href='/privacy-policy' target="_blank" className="hover:underline 
+                                                    cursor-pointer text-[#0887be]"
+                                                >
                                                     Privacy policy
                                                 </Link>.
                                             </label>
                                         </div>
 
-                                        {/* Validation error for checkbox */}
                                         {(touched.agree || submitCount > 0) && errors.agree && (
                                             <p className="mt-1 text-sm text-[#ff0000]">
                                                 {errors.agree}
@@ -162,9 +150,7 @@ const ApplyNow = () => {
                                     </div>
 
                                     <div className="my-9 overflow-hidden">
-                                        <HCaptcha
-                                            ref={captchaRef}
-                                            sitekey='aec4547e-2972-4088-b6fe-04d82600855a'
+                                        <HCaptcha ref={captchaRef} sitekey='aec4547e-2972-4088-b6fe-04d82600855a'
                                             onVerify={(token) => setFieldValue("hcaptcha", token)}
                                             onExpire={() => setFieldValue("hcaptcha", "")}
                                         />
@@ -175,10 +161,8 @@ const ApplyNow = () => {
                                     </div>
 
                                     <div className="flex justify-center">
-                                        <button
-                                            type="submit"
-                                            disabled={loading}
-                                            className="cursor-pointer rounded-md px-8 py-3 linear-gradient text-sm sm:text-base font-semibold text-white"
+                                        <button type="submit" disabled={loading} className="cursor-pointer rounded-md px-8 py-3
+                                            linear-gradient text-sm sm:text-base font-semibold text-white"
                                         >
                                             {loading ? (
                                                 <div className="flex items-center gap-2.5">
@@ -203,4 +187,4 @@ const ApplyNow = () => {
     );
 };
 
-export default ApplyNow;
+export default ApplyNow
