@@ -46,7 +46,7 @@ const Features = () => {
                                                 </div>
 
                                                 <div className="flex flex-col gap-4 md:items-start items-center relative z-10">
-                                                    <Link href={`/feature-post/features/${item?.slug}`}>
+                                                    <Link rel="preload" href={`/feature-post/features/${item?.slug}`}>
                                                         <h3 className="font-semibold leading-[1.4] text-[#707070] text-xl
                                                             transition-colors duration-300 group-hover:text-white
                                                             cursor-pointer hover:underline"
@@ -74,9 +74,9 @@ const Features = () => {
                         </div>
 
                         <div className='col-span-12 mx-auto' data-aos="zoom-in-up">
-                            <Link href='tel:+1-866-232-4325' className="border border-[#ef793c] rounded-md text-base py-3 
+                            <Link rel="preload" href='tel:+1-866-232-4325' className="border border-[#ef793c] rounded-md 
                                 font-medium px-6 cursor-pointer inline-block lg:mt-0 mt-5 text-white uppercase hover:underline
-                                bg-linear-to-r from-[#ef793c] to-[#ff6a00]"
+                                bg-linear-to-r from-[#ef793c] to-[#ff6a00] text-base py-3"
                             >
                                 SET UP A CALL
                             </Link>
@@ -106,8 +106,8 @@ const Features = () => {
                             </p>
                         </div>
 
-                        <Link href='/get-started' className="border border-[#ef793c] rounded-md text-base py-3 px-6
-                            font-medium cursor-pointer inline-block md:my-0 mt-5 text-white uppercase
+                        <Link rel="preload" href='/get-started' className="border border-[#ef793c] rounded-md text-base
+                            font-medium cursor-pointer inline-block md:my-0 mt-5 text-white uppercase py-3 px-6
                             bg-linear-to-r from-[#ef793c] to-[#ff6a00]" data-aos="fade-left"
                         >
                             Get Your EquiPay Account
@@ -145,8 +145,8 @@ const Features = () => {
                                 payment products and services and accept payments across all platforms.
                             </p>
 
-                            <Link href='/get-started' className="border border-[#ef793c] text-white uppercase mt-5
-                                rounded-md text-base py-3 font-medium px-6 cursor-pointer inline-block
+                            <Link rel="preload" href='/get-started' className="border border-[#ef793c] text-white
+                                rounded-md text-base py-3 font-medium px-6 cursor-pointer inline-block uppercase mt-5
                                 bg-linear-to-r from-[#ef793c] to-[#ff6a00] "
                             >
                                 Get Started

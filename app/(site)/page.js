@@ -42,8 +42,8 @@ const Home = () => {
                                     </p>
                                 </div>
 
-                                <Link href={item?.url} className="read-more mt-5 mb-2 linear-gradient-text opacity-0  
-                                    group-hover:opacity-100 group-hover:visible group-hover:-translate-y-1.5 invisible
+                                <Link rel="preload" href={item?.url} className="read-more mb-2 linear-gradient-text opacity-0  
+                                    group-hover:opacity-100 group-hover:visible group-hover:-translate-y-1.5 invisible mt-5
                                     relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-px 
                                     after:w-0 after:bg-linear-to-r after:from-[#ef793c] after:to-[#ff6a00] hidden
                                     after:transition-all after:duration-500 hover:after:w-full text-[16px] lg:inline-block"
@@ -51,7 +51,7 @@ const Home = () => {
                                     Read More
                                 </Link>
 
-                                <Link href={item?.url} className="mt-5 mb-2 linear-gradient-text  
+                                <Link rel="preload" href={item?.url} className="mt-5 mb-2 linear-gradient-text  
                                     relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-px 
                                     after:w-0 after:bg-linear-to-r after:from-[#ef793c] after:to-[#ff6a00] inline-block
                                     after:transition-all after:duration-500 hover:after:w-full text-[16px] lg:hidden"
@@ -89,9 +89,9 @@ const Home = () => {
                             </div>
 
 
-                            <Link href='/contact' className="border border-[#ef793c] rounded-md text-base py-3 font-medium
+                            <Link rel="preload" href='/contact' className="border border-[#ef793c] rounded-md text-base py-3
                                 bg-linear-to-r from-[#ef793c] to-[#ff6a00] px-6 cursor-pointer text-white uppercase
-                                z-30"
+                                z-30 font-medium"
                             >
                                 CONTACT US
                             </Link>
@@ -156,8 +156,8 @@ const Home = () => {
                             </p>
                         </div>
 
-                        <Link href='/get-started' className="border border-[#ef793c] rounded-md text-base py-3 px-6
-                            font-medium cursor-pointer inline-block md:my-0 mt-5 text-white uppercase
+                        <Link rel="preload" href='/get-started' className="border border-[#ef793c] rounded-md text-base py-3
+                            font-medium cursor-pointer inline-block md:my-0 mt-5 text-white uppercase px-6
                             bg-linear-to-r from-[#ef793c] to-[#ff6a00]" data-aos="fade-left"
                         >
                             Get Your EquiPay Account
@@ -192,7 +192,7 @@ const Home = () => {
                         md:gap-y-5 sm:gap-3 gap-2 items-center" data-aos="zoom-in-up"
                     >
                         {INTEGRATIONS_ITEMS.map((item, index) => (
-                            <Link key={index} href="/connect-to-equipay" className="block md:p-5 p-3.5 
+                            <Link rel="preload" key={index} href="/connect-to-equipay" className="block md:p-5 p-3.5 
                                 max-h-max bg-[#F4F7FC] rounded-md transition group cursor-pointer"
                             >
                                 <div className="relative h-auto mx-auto flex items-center justify-center overflow-hidden">
@@ -212,8 +212,8 @@ const Home = () => {
                         md:gap-y-5 sm:gap-3 gap-2 items-center" data-aos="zoom-in-up"
                     >
                         {INTEGRATIONS_ITEMS.map((item, index) => (
-                            <Link key={index} href="/connect-to-equipay" className="block md:p-5 p-3.5 bg-[#F4F7FC] 
-                                rounded-md transition group cursor-pointer relative overflow-hidden"
+                            <Link rel="preload" key={index} href="/connect-to-equipay" className="block md:p-5 bg-[#F4F7FC] 
+                                rounded-md transition group cursor-pointer relative overflow-hidden p-3.5"
                             >
                                 <img src={item?.img} alt={item?.name} className="sm:max-w-[178px] h-auto mx-auto
                                     duration-300 transition-transform group-hover:-translate-y-[200%] max-w-[110px]"

@@ -250,16 +250,16 @@ const GetStarted = () => {
 
                                             <label htmlFor="agree" className="text-base text-[#57647c] leading-[1.8]">
                                                 By checking this, you agree to our{" "}
-                                                <Link href="/terms-conditions" target="_blank" className="hover:underline 
-                                                    cursor-pointer text-[#0887be]"
+                                                <Link rel="preload" href="/terms-conditions" target="_blank"
+                                                    className="hover:underline cursor-pointer text-[#0887be]"
                                                 >
                                                     Terms
                                                 </Link>{" "}
 
                                                 and{" "}
 
-                                                <Link href="/privacy-policy" target="_blank" className="hover:underline 
-                                                    cursor-pointer text-[#0887be]"
+                                                <Link rel="preload" href="/privacy-policy" target="_blank"
+                                                    className="hover:underline cursor-pointer text-[#0887be]"
                                                 >
                                                     Privacy policy
                                                 </Link>.
@@ -325,8 +325,8 @@ const GetStarted = () => {
                                     <div>
                                         <p className="text-xl font-semibold text-[#212529] leading-[1.7]">Address</p>
 
-                                        <Link href="goo.gl/maps/DpKG3a5PcjJtj2dr5" target="_blank" className="relative gap-2 
-                                            leading-[1.8] text-[#e4e4e4] text-base font-light flex"
+                                        <Link rel="preload" href="goo.gl/maps/DpKG3a5PcjJtj2dr5" target="_blank"
+                                            className="relative gap-2 leading-[1.8] text-[#e4e4e4] text-base font-light flex"
                                         >
                                             <span className="mt-1 sm:text-base text-[#57647c] sm:leading-[1.8] leading-[1.7]
                                                 hover:underline hover:text-[#ef793c] text-sm font-light"
@@ -351,8 +351,8 @@ const GetStarted = () => {
                                     <div>
                                         <p className="text-xl font-semibold text-[#212529] leading-[1.7]">Email</p>
 
-                                        <Link href="mailto:help@equipay.co" target="_blank" className="relative flex font-light
-                                            gap-2 text-[#e4e4e4] leading-[1.8] text-base"
+                                        <Link rel="preload" href="mailto:help@equipay.co" target="_blank" className="relative
+                                            gap-2 text-[#e4e4e4] leading-[1.8] text-base flex font-light"
                                         >
                                             <span className="mt-1 sm:text-base text-sm font-light text-[#57647c] leading-[1.7]
                                                 sm:leading-[1.8] hover:underline hover:text-[#ef793c]"
@@ -377,8 +377,8 @@ const GetStarted = () => {
                                     <div>
                                         <p className="text-xl font-semibold text-[#212529] leading-[1.7]">Phone</p>
 
-                                        <Link href="tel:+1-866-232-4325" target="_blank" className="relative gap-2 leading-[1.8]
-                                            flex text-[#e4e4e4] text-base font-light"
+                                        <Link rel="preload" href="tel:+1-866-232-4325" target="_blank" className="relative gap-2
+                                            flex text-[#e4e4e4] text-base font-light leading-[1.8]"
                                         >
                                             <span className="mt-1 sm:text-base text-sm font-light text-[#57647c] leading-[1.7]
                                                 sm:leading-[1.8] hover:underline hover:text-[#ef793c]"

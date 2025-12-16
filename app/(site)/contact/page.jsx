@@ -140,16 +140,16 @@ const Contact = () => {
 
                                         <label htmlFor="agree" className="text-base text-[#57647c] leading-[1.8]">
                                             By checking this, you agree to our{" "}
-                                            <Link href="/terms-conditions" target="_blank" className="hover:underline 
-                                                cursor-pointer text-[#0887be]"
+                                            <Link rel="preload" href="/terms-conditions" target="_blank"
+                                                className="hover:underline cursor-pointer text-[#0887be]"
                                             >
                                                 Terms
                                             </Link>{" "}
 
                                             and{" "}
 
-                                            <Link href="/privacy-policy" target="_blank" className="hover:underline 
-                                                cursor-pointer text-[#0887be]"
+                                            <Link rel="preload" href="/privacy-policy" target="_blank"
+                                                className="hover:underline cursor-pointer text-[#0887be]"
                                             >
                                                 Privacy policy
                                             </Link> .
@@ -212,7 +212,7 @@ const Contact = () => {
                                             Address
                                         </p>
 
-                                        <Link href="https://maps.app.goo.gl/MTk2MkDv7fHmqYH89" target="_blank"
+                                        <Link rel="preload" href="https://maps.app.goo.gl/MTk2MkDv7fHmqYH89" target="_blank"
                                             className="relative gap-2 leading-[1.8] text-[#e4e4e4] text-base font-light flex"
                                         >
                                             <span className="mt-1 sm:text-base text-[#57647c] sm:leading-[1.8] 
@@ -240,7 +240,7 @@ const Contact = () => {
                                             Email
                                         </p>
 
-                                        <Link href="mailto:help@equipay.co" target="_blank" className="relative 
+                                        <Link rel="preload" href="mailto:help@equipay.co" target="_blank" className="relative 
                                             gap-2 text-[#e4e4e4] leading-[1.8] text-base font-light flex"
                                         >
                                             <span className="mt-1 sm:text-base text-sm font-light text-[#57647c] 
@@ -268,7 +268,7 @@ const Contact = () => {
                                             Phone
                                         </p>
 
-                                        <Link href="tel:+1-657-312-4925" target="_blank" className="relative gap-2
+                                        <Link rel="preload" href="tel:+1-657-312-4925" target="_blank" className="relative gap-2
                                             leading-[1.8] text-[#e4e4e4] text-base font-light flex"
                                         >
                                             <span className="mt-1 sm:text-base text-sm font-light text-[#57647c] 

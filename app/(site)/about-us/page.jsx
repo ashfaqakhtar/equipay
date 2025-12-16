@@ -109,7 +109,7 @@ const AboutUs = () => {
                                 </h6>
 
                                 {member?.linkedin && (
-                                    <Link href={member?.linkedin} target="_blank" className="mt-4 inline-flex 
+                                    <Link rel="preload" href={member?.linkedin} target="_blank" className="mt-4 inline-flex 
                                         items-center justify-center text-[#6EC1E4]"
                                     >
                                         <FaLinkedinIn className="text-2xl" />

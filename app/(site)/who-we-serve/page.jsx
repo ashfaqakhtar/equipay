@@ -56,9 +56,9 @@ const WhoWeServe = () => {
 
                     <div className="grid grid-cols-12 pb-5">
                         <div className="col-span-12 lg:col-span-6 mx-auto" data-aos="zoom-in">
-                            <Link href="/get-started" className="text-white uppercase rounded-[5px] border text-base
+                            <Link rel="preload" href="/get-started" className="text-white uppercase rounded-[5px] border
                                 bg-linear-to-r from-[#ef793c] to-[#ff6a00] border-[#ef793c] cursor-pointer px-8 py-2.5
-                                transition-all duration-300 hover:underline hover:border-[#204D74] hover:px-[33px]"
+                                transition-all duration-300 hover:underline hover:border-[#204D74] hover:px-[33px] text-base"
                             >
                                 GET STARTED
                             </Link>
@@ -81,9 +81,9 @@ const WhoWeServe = () => {
                         <div className="col-span-12 lg:col-span-6" />
 
                         <div className="col-span-12 lg:col-span-6 mx-auto" data-aos="zoom-in">
-                            <Link href="/get-started" className="text-white uppercase rounded-[5px] border text-base
+                            <Link rel="preload" href="/get-started" className="text-white uppercase rounded-[5px] border
                                 bg-linear-to-r from-[#ef793c] to-[#ff6a00] border-[#ef793c] cursor-pointer px-8 py-2.5
-                                transition-all duration-300 hover:underline hover:border-[#204D74] hover:px-[33px]"
+                                transition-all duration-300 hover:underline hover:border-[#204D74] hover:px-[33px] text-base"
                             >
                                 GET STARTED
                             </Link>
@@ -103,9 +103,9 @@ const WhoWeServe = () => {
 
                     <div className="grid grid-cols-12 pb-5 mb-[50px]">
                         <div className="col-span-12 lg:col-span-6 mx-auto" data-aos="zoom-in">
-                            <Link href="/get-started" className="text-white uppercase rounded-[5px] border text-base
+                            <Link rel="preload" href="/get-started" className="text-white uppercase rounded-[5px] border
                                 bg-linear-to-r from-[#ef793c] to-[#ff6a00] border-[#ef793c] cursor-pointer px-8 py-2.5
-                                transition-all duration-300 hover:underline hover:border-[#204D74] hover:px-[33px]"
+                                transition-all duration-300 hover:underline hover:border-[#204D74] hover:px-[33px] text-base"
                             >
                                 GET STARTED
                             </Link>
@@ -135,8 +135,8 @@ const WhoWeServe = () => {
                             </p>
                         </div>
 
-                        <Link href='/get-started' className="border border-[#ef793c] rounded-md text-base py-3 px-6
-                            font-medium cursor-pointer inline-block md:my-0 mt-5 text-white uppercase
+                        <Link rel="preload" href='/get-started' className="border border-[#ef793c] rounded-md text-base
+                            font-medium cursor-pointer inline-block md:my-0 mt-5 text-white uppercase py-3 px-6
                             bg-linear-to-r from-[#ef793c] to-[#ff6a00]" data-aos="fade-left"
                         >
                             Get Your EquiPay Account

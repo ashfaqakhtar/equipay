@@ -26,6 +26,7 @@ const NotFound = () => {
 
                     <Link href='/' className="text-white uppercase border border-[#ef793c] rounded-md text-base py-3 
                         bg-linear-to-r from-[#ef793c] to-[#ff6a00] font-medium px-6 cursor-pointer inline-block my-5"
+                        rel="preload"
                     >
                         Go to Home
                     </Link>
