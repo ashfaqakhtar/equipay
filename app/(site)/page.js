@@ -21,7 +21,7 @@ const Home = () => {
                         {FEATURES_ITEMS?.map((item, index) => (
                             <div key={index} className="single-featured-box relative group text-center py-5 overflow-hidden
                                 md:border-r border-[#eeeeee] md:border-b md:border-0 lg:border-0 border lg:border-r px-8
-                                lg:last:border-r-0 md:last:border-r-none md:rounded-none rounded-md xl:px-14 lg:px-4 md:px-14"
+                                lg:last:border-r-0 md:last:border-r-none md:rounded-none rounded-md xl:px-7 lg:px-2 md:px-7"
                             >
                                 <div className="relative h-[70px] w-full flex justify-center overflow-hidden">
                                     <div className="flex flex-col transition-transform duration-300 
