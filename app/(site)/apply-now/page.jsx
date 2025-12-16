@@ -8,8 +8,8 @@ import { Fragment, useRef, useState } from 'react';
 import { Form, Formik } from 'formik';
 import BannerSection from '@/components/BannerSection';
 import MyInput from '@/components/MyInput';
-import HCaptcha from "@hcaptcha/react-hcaptcha";
 import toast from 'react-hot-toast';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const PHP_ENDPOINT = "/mail/apply_now_mail.php";
 
@@ -150,10 +150,14 @@ const ApplyNow = () => {
                                     </div>
 
                                     <div className="my-9 overflow-hidden">
-                                        <HCaptcha ref={captchaRef} sitekey='aec4547e-2972-4088-b6fe-04d82600855a'
+                                        <ReCAPTCHA sitekey="6LdseS0sAAAAABdJfcMELRH7ZFUEbxc__aXLSyvJ" size="invisible"
+                                            onChange={(token) => setFieldValue("hcaptcha", token || "")} ref={captchaRef}
+                                        />
+
+                                        {/* <HCaptcha ref={captchaRef} sitekey='aec4547e-2972-4088-b6fe-04d82600855a'
                                             onVerify={(token) => setFieldValue("hcaptcha", token)}
                                             onExpire={() => setFieldValue("hcaptcha", "")}
-                                        />
+                                        /> */}
 
                                         {(touched.hcaptcha || submitCount > 0) && (
                                             <p className="mt-1 text-base text-[#ff0000]">{errors.hcaptcha}</p>

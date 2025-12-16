@@ -8,7 +8,7 @@ import MyInput from "@/components/MyInput";
 import { MdLocationOn } from "react-icons/md";
 import { FaEnvelope, FaPhoneVolume } from "react-icons/fa";
 import Head from "next/head";
-import HCaptcha from "@hcaptcha/react-hcaptcha";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const PHP_ENDPOINT = "/mail/contact_page_mail.php";
 
@@ -157,9 +157,9 @@ const Contact = () => {
                                     </div>
 
                                     <div className="my-9 overflow-hidden">
-                                        <HCaptcha ref={captchaRef} sitekey="aec4547e-2972-4088-b6fe-04d82600855a"
-                                            onVerify={(token) => setFieldValue("hcaptcha", token)}
-                                            onExpire={() => setFieldValue("hcaptcha", "")}
+                                        <ReCAPTCHA sitekey="6LdseS0sAAAAABdJfcMELRH7ZFUEbxc__aXLSyvJ"
+                                            onChange={(token) => setFieldValue("hcaptcha", token || "")}
+                                            ref={captchaRef} size="invisible"
                                         />
 
                                         {(touched.hcaptcha || submitCount > 0) &&

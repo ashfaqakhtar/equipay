@@ -11,6 +11,7 @@ import HCaptcha from "@hcaptcha/react-hcaptcha";
 import BannerSection from "@/components/BannerSection";
 import Head from "next/head";
 import toast from "react-hot-toast";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const PHP_ENDPOINT = "/mail/get_started_mail.php";
 
@@ -272,9 +273,9 @@ const GetStarted = () => {
                                     </div>
 
                                     <div className="my-9 overflow-hidden">
-                                        <HCaptcha ref={captchaRef} sitekey="aec4547e-2972-4088-b6fe-04d82600855a"
-                                            onVerify={(token) => setFieldValue("hcaptcha", token)}
-                                            onExpire={() => setFieldValue("hcaptcha", "")}
+                                        <ReCAPTCHA sitekey="6LdseS0sAAAAABdJfcMELRH7ZFUEbxc__aXLSyvJ"
+                                            onChange={(token) => setFieldValue("hcaptcha", token || "")}
+                                            ref={captchaRef} size="invisible"
                                         />
 
                                         {(touched.hcaptcha || submitCount > 0) &&
