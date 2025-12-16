@@ -7,7 +7,6 @@ import React, { Fragment, useRef, useState } from "react";
 import MyInput from "@/components/MyInput";
 import { MdLocationOn } from "react-icons/md";
 import { FaEnvelope, FaPhoneVolume } from "react-icons/fa";
-import HCaptcha from "@hcaptcha/react-hcaptcha";
 import BannerSection from "@/components/BannerSection";
 import Head from "next/head";
 import toast from "react-hot-toast";
