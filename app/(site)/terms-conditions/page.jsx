@@ -47,7 +47,9 @@ const TermsConditions = () => {
 
                     <p className='md:text-lg text-base md:text-justify text-left font-light leading-[1.7] text-[#57647c] mb-5'>
                         We respect the privacy of our Service users. Please refer to the Company’s Privacy Policy ( found here:{" "}
-                        <Link href='/privacy-policy' target='_blank' className="hover:underline cursor-pointer text-[#ef793c]">
+                        <Link rel="preload" href='/privacy-policy' target='_blank' className="hover:underline cursor-pointer
+                           text-[#ef793c]"
+                        >
                             https://www.equipay.com/privacy-policy
                         </Link>{" "})
                         which explains how we collect, use, and disclose information that pertains to your privacy. When you
@@ -371,7 +373,9 @@ const TermsConditions = () => {
 
                     <p className='md:text-lg text-base md:text-justify text-left font-light leading-[1.7] text-[#57647c] mt-5'>
                         The Company may assign or delegate these Terms of Service and / or the Company’s Privacy Policy ({" "}
-                        <Link href='/privacy-policy' target='_blank' className="hover:underline cursor-pointer text-[#ef793c]">
+                        <Link rel="preload" href='/privacy-policy' target='_blank' className="hover:underline cursor-pointer 
+                            text-[#ef793c]"
+                        >
                             https://www.equipay/privacy-policy
                         </Link>{" "}),
                         in whole or in part, to any person or entity at any time with or without your consent. You may not assign
@@ -393,7 +397,9 @@ const TermsConditions = () => {
 
                     <p className='md:text-lg text-base md:text-justify text-left font-light leading-[1.7] text-[#57647c] mt-5'>
                         If you have any questions about this Privacy Policy, please Contact Us ({" "}
-                        <Link href='/contact' target='_blank' className="hover:underline cursor-pointer text-[#ef793c]">
+                        <Link rel="preload" href='/contact' target='_blank' className="hover:underline cursor-pointer 
+                           text-[#ef793c]"
+                        >
                             https://www.equipay.com/contact
                         </Link>{" "})
                     </p>

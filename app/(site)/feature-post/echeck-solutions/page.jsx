@@ -110,7 +110,9 @@ const EcheckSolutions = () => {
                 <div className="lg:px-24 sm:px-7 px-5">
                     <div className="relative z-10 container mx-auto flex md:flex-row flex-col items-center justify-between">
                         <div data-aos="fade-right">
-                            <h2 className="md:text-start text-center lg:text-[40px] sm:text-[34px] text-2xl text-white leading-[1.2] font-semibold">
+                            <h2 className="md:text-start text-center lg:text-[40px] sm:text-[34px] text-2xl text-white 
+                                leading-[1.2] font-semibold"
+                            >
                                 Start Your Application Now
                             </h2>
 
@@ -119,7 +121,10 @@ const EcheckSolutions = () => {
                             </p>
                         </div>
 
-                        <Link href='/get-started' className="border border-[#ef793c] rounded-md text-base py-3 px-6 font-medium cursor-pointer inline-block md:my-0 mt-5 text-white uppercase bg-linear-to-r from-[#ef793c] to-[#ff6a00]" data-aos="fade-left">
+                        <Link rel="preload" href='/get-started' className="border border-[#ef793c] rounded-md text-base py-3 
+                            px-6 font-medium cursor-pointer inline-block md:my-0 mt-5 text-white uppercase 
+                            bg-linear-to-r from-[#ef793c] to-[#ff6a00]" data-aos="fade-left"
+                        >
                             Get Your EquiPay Account
                         </Link>
                     </div>
@@ -132,24 +137,30 @@ const EcheckSolutions = () => {
                         <InfoSection title='Frequently asked questions' image="/assets/faq.webp"
                             accordionClass={'lg:block hidden'} showAccordion={true} showImage={false} contentImage={true}
                             showAccordionData={<Accordion items={FREQUENTLY_QUESTIONS} isFirstOpen={true} />}
-                            aosAccordion={'fade-left'} description={`Our team has put together the most commonly asked questions easy for you to refer. For any more clarifications kindly contact us.`}
+                            aosAccordion={'fade-left'} description={`Our team has put together the most commonly asked 
+                                questions easy for you to refer. For any more clarifications kindly contact us.`}
                         />
                     </div>
 
                     <div className="grid grid-cols-12 gap-6 lg:gap-10 md:pt-20 pt-14 lg:pb-0 pb-10">
                         <div className="col-span-12 lg:col-span-6" data-aos="zoom-in">
-                            <h2 className="xl:text-[40px] lg:text-[34px] sm:text-[40px] text-[26px] m-0 leading-[1.2] font-semibold text-[#212529]">
+                            <h2 className="xl:text-[40px] lg:text-[34px] sm:text-[40px] text-[26px] m-0 leading-[1.2] 
+                                font-semibold text-[#212529]"
+                            >
                                 Still have questions?
                             </h2>
 
                             <div className="mt-4 mb-5 flex md:justify-start justify-center ">
                                 <div className="relative w-[90px] h-1.5 bg-[#ef793c40] rounded-full">
-                                    <div className="absolute left-0 -top-[2.6px] bg-[#ef793c] rounded-full animate-[MOVE-BG_3s_linear_infinite] w-[11px] h-[11px]" />
+                                    <div className="absolute left-0 -top-[2.6px] bg-[#ef793c] rounded-full 
+                                        animate-[MOVE-BG_3s_linear_infinite] w-[11px] h-[11px]"
+                                    />
                                 </div>
                             </div>
 
                             <p className="text-[15px] sm:text-base xl:text-lg text-[#57647c] font-light leading-[1.7]">
-                                Get in touch with our merchant experts for all your needs, Equipay strives to deliver friendly reliable customer service.
+                                Get in touch with our merchant experts for all your needs, Equipay strives to deliver friendly
+                                reliable customer service.
                             </p>
 
                             <Formik validationSchema={validationSchema} onSubmit={handleSubmit}
@@ -170,18 +181,32 @@ const EcheckSolutions = () => {
 
                                         <div className="flex items-start gap-2 text-sm text-[#57647c]">
                                             <input id="agree" type="checkbox" name="agree" checked={formik.values.agree}
-                                                onChange={formik.handleChange} className="md:mt-1 mt-1.5 border-[#d0d0e0] text-[#ef793c] focus:ring-[#ef793c] rounded  h-5 w-5" />
+                                                onChange={formik.handleChange} className="md:mt-1 mt-1.5 border-[#d0d0e0] 
+                                                text-[#ef793c] focus:ring-[#ef793c] rounded  h-5 w-5"
+                                            />
 
                                             <label htmlFor="agree" className='text-base text-[#57647c] leading-[1.8]'>
                                                 By checking this, you agree to our {" "}
-                                                <Link href='/terms-conditions' target="_blank" className="hover:underline cursor-pointer text-[#ef793c]">Terms</Link>
+                                                <Link rel="preload" href='/terms-conditions' target="_blank"
+                                                    className="hover:underline cursor-pointer text-[#ef793c]"
+                                                >
+                                                    Terms
+                                                </Link>
+
                                                 {" "}and{" "}
-                                                <Link href='/privacy-policy' target="_blank" className="hover:underline cursor-pointer text-[#ef793c]">Privacy policy</Link>.
+
+                                                <Link rel="preload" href='/privacy-policy' target="_blank"
+                                                    className="hover:underline cursor-pointer text-[#ef793c]"
+                                                >
+                                                    Privacy policy
+                                                </Link>.
                                             </label>
                                         </div>
 
                                         <div className="pt-4 pb-3 flex justify-center">
-                                            <button type="submit" disabled={loading} className="cursor-pointer rounded-md px-8 py-3 linear-gradient text-sm sm:text-base font-semibold text-white">
+                                            <button type="submit" disabled={loading} className="cursor-pointer rounded-md px-8 
+                                                py-3 linear-gradient text-sm sm:text-base font-semibold text-white"
+                                            >
                                                 {loading ? (
                                                     <div className="flex items-center gap-2.5">
                                                         <svg className="w-7 h-7 animate-spin text-white" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -198,7 +223,9 @@ const EcheckSolutions = () => {
                             </Formik>
                         </div>
 
-                        <div className="col-span-12 lg:col-span-6 lg:space-y-4.5 space-y-3.5 lg:block hidden" data-aos="fade-left">
+                        <div className="col-span-12 lg:col-span-6 lg:space-y-4.5 space-y-3.5 lg:block hidden"
+                            data-aos="fade-left"
+                        >
                             <Accordion items={STILL_QUESTIONS} isFirstOpen={true} />
                         </div>
                     </div>
@@ -207,7 +234,9 @@ const EcheckSolutions = () => {
                         <Accordion items={FREQUENTLY_QUESTIONS} isFirstOpen={true} />
                     </div>
 
-                    <div className="col-span-12 lg:col-span-6 lg:space-y-4.5 space-y-3.5 lg:hidden block pt-10" data-aos="zoom-in-up">
+                    <div className="col-span-12 lg:col-span-6 lg:space-y-4.5 space-y-3.5 lg:hidden block pt-10"
+                        data-aos="zoom-in-up"
+                    >
                         <Accordion items={STILL_QUESTIONS} isFirstOpen={true} />
                     </div>
                 </div>
@@ -216,4 +245,4 @@ const EcheckSolutions = () => {
     )
 }
 
-export default EcheckSolutions;
+export default EcheckSolutions

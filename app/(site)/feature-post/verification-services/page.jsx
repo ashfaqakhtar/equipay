@@ -54,8 +54,8 @@ const VerificationServices = () => {
                             </p>
                         </div>
 
-                        <Link href='/get-started' className="border border-[#ef793c] rounded-md text-base py-3 px-6
-                            font-medium cursor-pointer inline-block md:my-0 mt-5 text-white uppercase
+                        <Link rel="preload" href='/get-started' className="border border-[#ef793c] rounded-md text-base
+                            font-medium cursor-pointer inline-block md:my-0 mt-5 text-white uppercase py-3 px-6
                             bg-linear-to-r from-[#ef793c] to-[#ff6a00]" data-aos="fade-left"
                         >
                             Get Your EquiPay Account

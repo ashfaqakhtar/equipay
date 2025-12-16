@@ -158,8 +158,8 @@ const MerchantServices = () => {
                             </p>
                         </div>
 
-                        <Link href='/get-started' className="border border-[#ef793c] rounded-md text-base py-3 px-6
-                            font-medium cursor-pointer inline-block md:my-0 mt-5 text-white uppercase
+                        <Link rel="preload" href='/get-started' className="border border-[#ef793c] rounded-md text-base
+                            font-medium cursor-pointer inline-block md:my-0 mt-5 text-white uppercase py-3 px-6
                             bg-linear-to-r from-[#ef793c] to-[#ff6a00]" data-aos="fade-left"
                         >
                             Get Your EquiPay Account
@@ -194,7 +194,7 @@ const MerchantServices = () => {
                         md:gap-y-5 sm:gap-3 gap-2 items-center" data-aos="zoom-in-up"
                     >
                         {INTEGRATIONS_ITEMS.map((item, index) => (
-                            <Link key={index} href="/connect-to-equipay" className="block md:p-5 p-3.5 
+                            <Link rel="preload" key={index} href="/connect-to-equipay" className="block md:p-5 p-3.5 
                                 max-h-max bg-[#F4F7FC] rounded-md transition group cursor-pointer"
                             >
                                 <div className="relative h-auto mx-auto flex items-center justify-center overflow-hidden">

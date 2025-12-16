@@ -15,7 +15,7 @@ const PrivacyPolicy = () => {
                 <div className="container mx-auto">
                     <p className='md:text-lg text-base md:text-justify text-left font-light leading-[1.7] text-[#57647c] mb-5'>
                         Equipay (“us”, “we”, or “our”) operates {" "}
-                        <Link href='/' className="hover:underline cursor-pointer text-[#ef793c]">
+                        <Link rel="preload" href='/' className="hover:underline cursor-pointer text-[#ef793c]">
                             https://www.equipay.com
                         </Link>
                         {" "} (the “Site”). This page informs you of our policies regarding the collection, use and disclosure
@@ -115,7 +115,9 @@ const PrivacyPolicy = () => {
 
                     <p className='md:text-lg text-base md:text-justify text-left font-light leading-[1.7] text-[#57647c] mt-5'>
                         If you have any questions about this Privacy Policy, please Contact Us ({" "}
-                        <Link href='/contact' target='_blank' className="hover:underline cursor-pointer text-[#ef793c]">
+                        <Link rel="preload" href='/contact' target='_blank' className="hover:underline cursor-pointer
+                            text-[#ef793c]"
+                        >
                             https://www.equipay.com/contact
                         </Link>{" "})
                     </p>

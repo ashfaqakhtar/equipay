@@ -53,7 +53,7 @@ const Navbar = () => {
                 <div className={`flex items-center justify-between`}>
                     <div className={`flex justify-between w-full`}>
                         <div className="flex items-center" data-aos="fade-right">
-                            <Link href="/">
+                            <Link rel="preload" href="/">
                                 <Image src="/assets/logo_white.webp" alt="Logo" width={176} height={56}
                                     className="xl:max-w-40 lg:max-w-32 max-w-28 h-auto"
                                 />
@@ -83,8 +83,8 @@ const Navbar = () => {
                                                 >
                                                     <div className="flex flex-col space-y-2">
                                                         {nav.children.map((child, idx) => (
-                                                            <Link key={idx} href={child?.path} className={`flex items-center
-                                                                gap-2.5 pr-5 hover:text-[#ef793c]
+                                                            <Link rel="preload" key={idx} href={child?.path} className={`flex
+                                                                gap-2.5 pr-5 hover:text-[#ef793c] items-center
                                                                 ${path === child.path ? 'text-[#ef793c]' : ''}`}
                                                             >
                                                                 {child.label}
@@ -94,7 +94,7 @@ const Navbar = () => {
                                                 </div>
                                             </div>
                                         ) : (
-                                            <Link href={nav?.path} className={`hover:text-[#ef793c] hover:border-b
+                                            <Link rel="preload" href={nav?.path} className={`hover:text-[#ef793c] hover:border-b
                                                 lg:text-lg text-[17px] hover:border-[#ef793c]
                                                 ${path === nav?.path ? 'text-[#ef793c]' : ''}`}
                                             >
@@ -105,14 +105,14 @@ const Navbar = () => {
                                 ))}
 
 
-                                <Link href='/learn-more' className="border border-[#ef793c] rounded-sm text-sm py-2 px-3
-                                    bg-linear-to-r from-[#ef793c] to-[#ff6a00] uppercase font-medium cursor-pointer"
+                                <Link rel="preload" href='/learn-more' className="border border-[#ef793c] rounded-sm text-sm
+                                    bg-linear-to-r from-[#ef793c] to-[#ff6a00] uppercase font-medium cursor-pointer py-2 px-3"
                                 >
                                     Learn More
                                 </Link>
 
-                                <Link href='/apply-now' className="border border-[#ef793c] rounded-sm text-sm py-2 px-3
-                                    bg-linear-to-r from-[#ef793c] to-[#ff6a00] uppercase font-medium cursor-pointer"
+                                <Link rel="preload" href='/apply-now' className="border border-[#ef793c] rounded-sm text-sm
+                                    bg-linear-to-r from-[#ef793c] to-[#ff6a00] uppercase font-medium cursor-pointer py-2 px-3"
                                 >
                                     Apply Now
                                 </Link>
@@ -156,7 +156,7 @@ const Navbar = () => {
                                                 {open === index && (
                                                     <div className="flex flex-col ml-4 mt-2.5">
                                                         {nav.children.map((child, idx) => (
-                                                            <Link key={idx} href={child.path} className={`py-1.5 
+                                                            <Link rel="preload" key={idx} href={child.path} className={`py-1.5 
                                                                 ${path === child.path ? 'text-[#ef793c]' : ''}`}
                                                                 onClick={() => { setIsMenuOpen(false); setOpen(null); }}
                                                             >
@@ -167,7 +167,7 @@ const Navbar = () => {
                                                 )}
                                             </div>
                                         ) : (
-                                            <Link href={nav.path} onClick={() => setIsMenuOpen(false)}
+                                            <Link rel="preload" href={nav.path} onClick={() => setIsMenuOpen(false)}
                                                 className={`py-2 w-full block hover:bg-white px-[26px] 
                                                 ${path === nav.path ? 'text-[#ef793c]' : ''}`}
                                             >
@@ -178,11 +178,11 @@ const Navbar = () => {
                                 ))}
                             </ul>
 
-                            <Link href="/learn-more" className="block hover:bg-white py-2 px-[26px]">
+                            <Link rel="preload" href="/learn-more" className="block hover:bg-white py-2 px-[26px]">
                                 Learn More
                             </Link>
 
-                            <Link href="/apply-now" className="block hover:bg-white py-2 px-[26px]">
+                            <Link rel="preload" href="/apply-now" className="block hover:bg-white py-2 px-[26px]">
                                 Apply Now
                             </Link>
                         </div>

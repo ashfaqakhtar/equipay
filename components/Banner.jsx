@@ -24,7 +24,7 @@ const Banner = () => {
                             </div>
 
                             <div className=" text-base cursor-pointer text-center lg:text-left md:mt-8 mt-10">
-                                <Link href='/apply-now' className="text-white uppercase border border-[#ef793c] 
+                                <Link rel="preload" href='/apply-now' className="text-white uppercase border border-[#ef793c] 
                                     bg-linear-to-r from-[#ef793c] to-[#ff6a00] rounded-md py-3 font-medium px-6"
                                 >
                                     Start Processing Now!

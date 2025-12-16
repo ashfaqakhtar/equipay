@@ -26,16 +26,16 @@ const Footer = () => {
                         </p>
 
                         <div className="flex space-x-2">
-                            <Link href='https://www.facebook.com/EquiPay' target="_blank" className="w-8 h-8 border-[#ece9e9]
+                            <Link rel="preload" href='https://www.facebook.com/EquiPay' target="_blank" className="w-8 h-8
                                 rounded-full bg-white text-[#ef793c] hover:bg-[#ef793c] hover:text-white border 
-                                flex items-center justify-center cursor-pointer hover:border-[#ef793c]"
+                                flex items-center justify-center cursor-pointer hover:border-[#ef793c] border-[#ece9e9]"
                             >
                                 <BiLogoFacebook size={22} />
                             </Link>
 
-                            <Link href='https://www.facebook.com/EquiPay' target="_blank" className="w-8 h-8 border-[#ece9e9]
+                            <Link rel="preload" href='https://www.facebook.com/EquiPay' target="_blank" className="w-8 h-8
                                 rounded-full bg-white text-[#ef793c] hover:bg-[#ef793c] hover:text-white border 
-                                flex items-center justify-center cursor-pointer hover:border-[#ef793c]"
+                                flex items-center justify-center cursor-pointer hover:border-[#ef793c] border-[#ece9e9]"
                             >
                                 <ImLinkedin />
                             </Link>
@@ -53,9 +53,9 @@ const Footer = () => {
 
                             <ul className="flex flex-col mt-6">
                                 {section?.items.map((item, idx) => (
-                                    <Link key={idx} href={item.href} className={`relative pl-5 text-[#e4e4e4] leading-[1.8] 
+                                    <Link rel="preload" key={idx} href={item.href} className={`relative pl-5 text-[#e4e4e4]
                                         mb-2 text-base font-light before:content-[''] before:w-[7px] before:h-[7px] 
-                                        before:left-0 before:absolute before:top-1/2 before:bg-[#ef793c]
+                                        before:left-0 before:absolute before:top-1/2 before:bg-[#ef793c] leading-[1.8] 
                                         before:-translate-y-1/2`}
                                     >
                                         <span className="hover:underline hover:text-[#ef793c]">
@@ -75,7 +75,7 @@ const Footer = () => {
                         </h3>
 
                         <ul className="flex flex-col mt-6">
-                            <Link href='https://www.google.com/maps/place/2170+Main+St+STE+203,+Sarasota,+FL+34237,+USA/@27.3362213,-82.5292981,737m/data=!3m2!1e3!4b1!4m6!3m5!1s0x88c340651e18d3c3:0x8be8283a150f5cfa!8m2!3d27.3362166!4d-82.5267232!16s%2Fg%2F11gg6cb2y5?entry=tts&g_ep=EgoyMDI0MTAyMy4wIPu8ASoASAFQAw%3D%3D'
+                            <Link rel="preload" href='https://www.google.com/maps/place/2170+Main+St+STE+203,+Sarasota,+FL+34237,+USA/@27.3362213,-82.5292981,737m/data=!3m2!1e3!4b1!4m6!3m5!1s0x88c340651e18d3c3:0x8be8283a150f5cfa!8m2!3d27.3362166!4d-82.5267232!16s%2Fg%2F11gg6cb2y5?entry=tts&g_ep=EgoyMDI0MTAyMy4wIPu8ASoASAFQAw%3D%3D'
                                 target='_blank' className={`relative text-[#e4e4e4] leading-[1.8] mb-3 text-base font-light flex gap-2`}
                             >
                                 <FaMapMarkerAlt size={20} className="text-[#ef793c] mt-2" />
@@ -84,8 +84,8 @@ const Footer = () => {
                                 </span>
                             </Link>
 
-                            <Link href='mailto:help@equipay.co' target='_blank' className={`relative text-[#e4e4e4] 
-                                leading-[1.8] mb-3 text-base font-light flex gap-2`}
+                            <Link rel="preload" href='mailto:help@equipay.co' target='_blank' className={`text-[#e4e4e4] 
+                                leading-[1.8] mb-3 text-base font-light flex gap-2 relative`}
                             >
                                 <FaRegEnvelope size={20} className="text-[#ef793c] mt-[5px]" />
                                 <span className="hover:underline hover:text-[#ef793c]">
@@ -93,7 +93,7 @@ const Footer = () => {
                                 </span>
                             </Link>
 
-                            <Link href='tel:+1-657-312-4925' className={`relative text-[#e4e4e4] leading-[1.8]
+                            <Link rel="preload" href='tel:+1-657-312-4925' className={`relative text-[#e4e4e4] leading-[1.8]
                                 text-base font-light flex gap-2`}
                             >
                                 <FaPhoneVolume size={20} className="text-[#ef793c] mt-[5px]" />
@@ -108,15 +108,15 @@ const Footer = () => {
                 <hr className="border-white mt-[50px]" />
 
                 <p className="text-center text-[15px] font-normal text-[#e4e4e4] py-7 leading-[1.8]">
-                    <Link href='/privacy-policy' target="_blank" className="hover:underline hover:text-[#ef793c]">
+                    <Link rel="preload" href='/privacy-policy' target="_blank" className="hover:underline hover:text-[#ef793c]">
                         Privacy
                     </Link>
                     {" | "}
-                    <Link href='/terms-conditions' target="_blank" className="hover:underline hover:text-[#ef793c]">
+                    <Link rel="preload" href='/terms-conditions' target="_blank" className="hover:underline hover:text-[#ef793c]">
                         Terms & Conditions
                     </Link>
                     {" | "}
-                    <Link href='/legal' target="_blank" className="hover:underline hover:text-[#ef793c]">
+                    <Link rel="preload" href='/legal' target="_blank" className="hover:underline hover:text-[#ef793c]">
                         Legal
                     </Link>
                     {" | "} Copyright @ 2025 EquiPay. All rights reserved.

@@ -228,16 +228,16 @@ const ApplyNowOld = () => {
                                             <label htmlFor="agree" className='text-base text-[#57647c] leading-[1.8]'>
                                                 By checking this, you agree to our {" "}
 
-                                                <Link href='/terms-conditions' target="_blank" className="hover:underline 
-                                                    cursor-pointer text-[#ef793c]"
+                                                <Link rel="preload" href='/terms-conditions' target="_blank"
+                                                    className="hover:underline cursor-pointer text-[#ef793c]"
                                                 >
                                                     Terms
                                                 </Link>
 
                                                 {" "}and{" "}
 
-                                                <Link href='/privacy-policy' target="_blank" className="hover:underline 
-                                                    cursor-pointer text-[#ef793c]"
+                                                <Link rel="preload" href='/privacy-policy' target="_blank"
+                                                    className="hover:underline cursor-pointer text-[#ef793c]"
                                                 >
                                                     Privacy policy
                                                 </Link>.

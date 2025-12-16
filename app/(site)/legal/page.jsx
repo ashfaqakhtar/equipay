@@ -91,7 +91,7 @@ const Legal = () => {
                     </p>
 
                     <p className='md:text-lg text-base md:text-justify text-left leading-[1.7] mt-2'>
-                        <Link href='/privacy-policy' target='_blank'
+                        <Link rel="preload" href='/privacy-policy' target='_blank'
                             className="hover:no-underline underline cursor-pointer text-[#ef793c]"
                         >
                             Click here for our Privacy Policy
