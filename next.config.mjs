@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // globalNotFound: true,
+  globalNotFound: true,
+  trailingSlash: false,
   output: "export",
   images: {
     unoptimized: true,
