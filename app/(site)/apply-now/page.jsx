@@ -9,7 +9,6 @@ import { Form, Formik } from 'formik';
 import BannerSection from '@/components/BannerSection';
 import MyInput from '@/components/MyInput';
 import toast from 'react-hot-toast';
-import ReCAPTCHA from 'react-google-recaptcha';
 
 const PHP_ENDPOINT = "/mail/apply_now_mail.php";
 
@@ -20,7 +19,7 @@ const validationSchema = Yup.object({
     phone: Yup.string().required("Phone is required"),
     address: Yup.string().required("Address is required"),
     agree: Yup.boolean().oneOf([true], "You must accept Terms and Privacy policy"),
-    hcaptcha: Yup.string().required("Please verify you are human"),
+    // hcaptcha: Yup.string().required("Please verify you are human"),
 });
 
 const ApplyNow = () => {
@@ -37,7 +36,7 @@ const ApplyNow = () => {
             phone: values.phone,
             address: values.address,
             agree: values.agree ? true : false,
-            hcaptcha: values.hcaptcha || "",
+            // hcaptcha: values.hcaptcha || "",
         };
 
         try {
@@ -63,7 +62,7 @@ const ApplyNow = () => {
             if (res.ok && result && result.status === "success") {
                 toast.success("Mail Sent Successfully");
                 resetForm();
-                setFieldValue("hcaptcha", "");
+                // setFieldValue("hcaptcha", "");
                 if (captchaRef.current) captchaRef.current.resetCaptcha();
             } else {
                 const msg =
@@ -95,8 +94,8 @@ const ApplyNow = () => {
                     <div className="grid grid-cols-1 xl:gap-8 gap-6 xl:max-w-5xl mx-auto">
                         <Formik validationSchema={validationSchema} onSubmit={handleSubmit}
                             initialValues={{
-                                full_name: "", business_name: "", email: "", phone: "",
-                                address: "", agree: false, hcaptcha: "",
+                                full_name: "", business_name: "", email: "", phone: "", address: "", agree: false,
+                                // hcaptcha: "",
                             }}
                         >
                             {({ setFieldValue, touched, errors, submitCount, handleChange, values }) => (
@@ -149,20 +148,20 @@ const ApplyNow = () => {
                                         )}
                                     </div>
 
-                                    <div className="my-9 overflow-hidden">
+                                    {/* <div className="my-9 overflow-hidden">
                                         <ReCAPTCHA sitekey="6LdseS0sAAAAABdJfcMELRH7ZFUEbxc__aXLSyvJ" 
                                             onChange={(token) => setFieldValue("hcaptcha", token || "")} ref={captchaRef}
                                         />
 
-                                        {/* <HCaptcha ref={captchaRef} sitekey='aec4547e-2972-4088-b6fe-04d82600855a'
+                                        <HCaptcha ref={captchaRef} sitekey='aec4547e-2972-4088-b6fe-04d82600855a'
                                             onVerify={(token) => setFieldValue("hcaptcha", token)}
                                             onExpire={() => setFieldValue("hcaptcha", "")}
-                                        /> */}
+                                        />
 
                                         {(touched.hcaptcha || submitCount > 0) && (
                                             <p className="mt-1 text-base text-[#ff0000]">{errors.hcaptcha}</p>
                                         )}
-                                    </div>
+                                    </div> */}
 
                                     <div className="flex justify-center">
                                         <button type="submit" disabled={loading} className="cursor-pointer rounded-md px-8 py-3
