@@ -10,7 +10,6 @@ import { FaEnvelope, FaPhoneVolume } from "react-icons/fa";
 import BannerSection from "@/components/BannerSection";
 import Head from "next/head";
 import toast from "react-hot-toast";
-import ReCAPTCHA from "react-google-recaptcha";
 
 const PHP_ENDPOINT = "/mail/get_started_mail.php";
 
@@ -25,7 +24,7 @@ const validationSchema = Yup.object({
     message: Yup.string().required("Message is required"),
     rfp_request: Yup.string().required("RFP is required"),
     email_updates: Yup.string().required("Email Updates is required"),
-    hcaptcha: Yup.string().required("Please verify you are human"),
+    // hcaptcha: Yup.string().required("Please verify you are human"),
 });
 
 const GetStarted = () => {
@@ -48,7 +47,7 @@ const GetStarted = () => {
             rfp_request: values.rfp_request,
             email_updates: values.email_updates,
             agree: values.agree ? true : false,
-            hcaptcha: values.hcaptcha || "",
+            // hcaptcha: values.hcaptcha || "",
         };
 
         try {
@@ -74,7 +73,7 @@ const GetStarted = () => {
             if (res.ok && result && result.status === "success") {
                 toast.success("Email Sent Successfully");
                 resetForm();
-                setFieldValue("hcaptcha", "");
+                // setFieldValue("hcaptcha", "");
                 if (captchaRef.current) captchaRef.current.resetCaptcha();
             } else {
                 const msg = (result && result.message) || raw || "Server submission failed.";
@@ -106,7 +105,8 @@ const GetStarted = () => {
                             initialValues={{
                                 name: "", company_name: "", website: "", email: "", phone: "",
                                 country: "", monthly_volume: "", average_transaction: "", message: "",
-                                agree: false, rfp_request: "", email_updates: "", hcaptcha: "",
+                                agree: false, rfp_request: "", email_updates: "", 
+                                // hcaptcha: "",
                             }}
                         >
                             {({
@@ -268,17 +268,6 @@ const GetStarted = () => {
 
                                         {(touched.agree || submitCount > 0) && errors.agree &&
                                             <p className="mt-1 text-sm text-[#ff0000]">{errors.agree}</p>
-                                        }
-                                    </div>
-
-                                    <div className="my-9 overflow-hidden">
-                                        <ReCAPTCHA sitekey="6LdseS0sAAAAABdJfcMELRH7ZFUEbxc__aXLSyvJ"
-                                            onChange={(token) => setFieldValue("hcaptcha", token || "")}
-                                            ref={captchaRef} 
-                                        />
-
-                                        {(touched.hcaptcha || submitCount > 0) &&
-                                            <p className="mt-1 text-base text-[#ff0000]">{errors.hcaptcha}</p>
                                         }
                                     </div>
 
