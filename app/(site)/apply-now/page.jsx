@@ -150,7 +150,7 @@ const ApplyNow = () => {
                                     </div>
 
                                     <div className="my-9 overflow-hidden">
-                                        <ReCAPTCHA sitekey="6LdseS0sAAAAABdJfcMELRH7ZFUEbxc__aXLSyvJ" size="invisible"
+                                        <ReCAPTCHA sitekey="6LdseS0sAAAAABdJfcMELRH7ZFUEbxc__aXLSyvJ" 
                                             onChange={(token) => setFieldValue("hcaptcha", token || "")} ref={captchaRef}
                                         />
 
