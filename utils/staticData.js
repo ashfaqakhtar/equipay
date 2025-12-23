@@ -533,68 +533,86 @@ export const PAYMENT_TITLES = [
     {
         title: "One account connected to a network of global banks",
         image: [
-            { icon: "/icons/one_account/icon_1.svg" },
-            { icon: "/icons/one_account/icon_2.svg" },
+            { icon: "/icons/one_account/icon_1.svg", hover_icon: "/icons/one_account/hover_icon_1.svg" },
+            { icon: "/icons/one_account/icon_2.svg", hover_icon: "/icons/one_account/hover_icon_2.svg" },
         ],
     },
     {
         title: "Intelligent payment routing to optimize authorization & cost",
         image: [
-            { icon: "/icons/intelligent_payment/icon_1.svg" },
-            { icon: "/icons/intelligent_payment/icon_2.svg" },
-            { icon: "/icons/intelligent_payment/icon_3.svg" },
-            { icon: "/icons/intelligent_payment/icon_4.svg" },
+            { icon: "/icons/intelligent_payment/icon_1.svg", hover_icon: "/icons/intelligent_payment/hover_icon_1.svg" },
+            { icon: "/icons/intelligent_payment/icon_2.svg", hover_icon: "/icons/intelligent_payment/hover_icon_2.svg" },
+            { icon: "/icons/intelligent_payment/icon_3.svg", hover_icon: "/icons/intelligent_payment/hover_icon_3.svg" },
+            { icon: "/icons/intelligent_payment/icon_4.svg", hover_icon: "/icons/intelligent_payment/hover_icon_4.svg" },
         ],
     },
     {
         title: "100+ shopper currencies & 17 settlement currencies",
         image: [
-            { icon: "/icons/settlement_currencies/icon_1.svg" },
-            { icon: "/icons/settlement_currencies/icon_2.svg" },
-            { icon: "/icons/settlement_currencies/icon_3.svg" },
+            { icon: "/icons/settlement_currencies/icon_1.svg", hover_icon: "/icons/settlement_currencies/hover_icon_1.svg" },
+            { icon: "/icons/settlement_currencies/icon_2.svg", hover_icon: "/icons/settlement_currencies/hover_icon_2.svg" },
+            { icon: "/icons/settlement_currencies/icon_3.svg", hover_icon: "/icons/settlement_currencies/hover_icon_3.svg" },
         ],
     },
     {
         title: "100+ global payment types & eWallets to convert more shoppers",
         image: [
-            { icon: "/icons/eWallets/icon_1.svg" },
-            { icon: "/icons/eWallets/icon_2.svg" },
-            { icon: "/icons/eWallets/icon_3.svg" },
-            { icon: "/icons/eWallets/icon_4.svg" },
+            { icon: "/icons/eWallets/icon_1.svg", hover_icon: "/icons/eWallets/hover_icon_1.svg" },
+            { icon: "/icons/eWallets/icon_2.svg", hover_icon: "/icons/eWallets/hover_icon_2.svg" },
+            { icon: "/icons/eWallets/icon_3.svg", hover_icon: "/icons/eWallets/hover_icon_3.svg" },
+            { icon: "/icons/eWallets/icon_4.svg", hover_icon: "/icons/eWallets/hover_icon_4.svg" },
         ],
     },
     {
         title: "Automated accounts receivable",
         image: [
-            { icon: "/icons/automated_accounts_receivable/icon_1.svg" },
-            { icon: "/icons/automated_accounts_receivable/icon_2.svg" },
+            {
+                icon: "/icons/automated_accounts_receivable/icon_1.svg",
+                hover_icon: "/icons/automated_accounts_receivable/hover_icon_1.svg"
+            },
+            {
+                icon: "/icons/automated_accounts_receivable/icon_2.svg",
+                hover_icon: "/icons/automated_accounts_receivable/hover_icon_2.svg"
+            },
         ],
     },
     {
         title: "Integrated fraud & chargeback management",
         image: [
-            { icon: "/icons/chargeback_management/icon_1.svg" },
-            { icon: "/icons/chargeback_management/icon_2.svg" },
-            { icon: "/icons/chargeback_management/icon_3.svg" },
-            { icon: "/icons/chargeback_management/icon_4.svg" },
+            {
+                icon: "/icons/chargeback_management/icon_1.svg",
+                hover_icon: "/icons/chargeback_management/hover_icon_1.svg"
+            },
+            {
+                icon: "/icons/chargeback_management/icon_2.svg",
+                hover_icon: "/icons/chargeback_management/hover_icon_2.svg"
+            },
+            {
+                icon: "/icons/chargeback_management/icon_3.svg",
+                hover_icon: "/icons/chargeback_management/hover_icon_3.svg"
+            },
+            {
+                icon: "/icons/chargeback_management/icon_4.svg",
+                hover_icon: "/icons/chargeback_management/hover_icon_4.svg"
+            },
         ],
     },
     {
         title: "Built-in solutions for regulation & tax compliance",
         image: [
-            { icon: "/icons/tax_compliance/icon_1.svg" },
-            { icon: "/icons/tax_compliance/icon_2.svg" },
-            { icon: "/icons/tax_compliance/icon_3.svg" },
-            { icon: "/icons/tax_compliance/icon_4.svg" },
+            { icon: "/icons/tax_compliance/icon_1.svg", hover_icon: "/icons/tax_compliance/hover_icon_1.svg" },
+            { icon: "/icons/tax_compliance/icon_2.svg", hover_icon: "/icons/tax_compliance/hover_icon_2.svg" },
+            { icon: "/icons/tax_compliance/icon_3.svg", hover_icon: "/icons/tax_compliance/hover_icon_3.svg" },
+            { icon: "/icons/tax_compliance/icon_4.svg", hover_icon: "/icons/tax_compliance/hover_icon_4.svg" },
         ],
     },
     {
         title: "Reporting to increase visibility & simplify reconciliation",
         image: [
-            { icon: "/icons/simplify_reconciliation/icon_1.svg" },
-            { icon: "/icons/simplify_reconciliation/icon_2.svg" },
-            { icon: "/icons/simplify_reconciliation/icon_3.svg" },
-            { icon: "/icons/simplify_reconciliation/icon_4.svg" },
+            { icon: "/icons/simplify_reconciliation/icon_1.svg", hover_icon: "/icons/simplify_reconciliation/hover_icon_1.svg" },
+            { icon: "/icons/simplify_reconciliation/icon_2.svg", hover_icon: "/icons/simplify_reconciliation/hover_icon_2.svg" },
+            { icon: "/icons/simplify_reconciliation/icon_3.svg", hover_icon: "/icons/simplify_reconciliation/hover_icon_3.svg" },
+            { icon: "/icons/simplify_reconciliation/icon_4.svg", hover_icon: "/icons/simplify_reconciliation/hover_icon_4.svg" },
         ],
     },
 ];
@@ -606,8 +624,8 @@ export const PAYMENT_PLATFORM = [
         title: "One account connected to",
         sub_title: "a network of global banks",
         image: [
-            { icon: "/icons/one_account/icon_1.svg" },
-            { icon: "/icons/one_account/icon_2.svg" },
+            { icon: "/icons/one_account/icon_1.svg", white_icon: "/icons/one_account/white_icon_1.svg" },
+            { icon: "/icons/one_account/icon_2.svg", white_icon: "/icons/one_account/white_icon_2.svg" },
         ],
     },
     {
@@ -615,10 +633,10 @@ export const PAYMENT_PLATFORM = [
         img: "/icons/second_icon.png",
         sub_title: "Intelligent payment routing to optimize authorization & cost",
         image: [
-            { icon: "/icons/intelligent_payment/icon_1.svg" },
-            { icon: "/icons/intelligent_payment/icon_2.svg" },
-            { icon: "/icons/intelligent_payment/icon_3.svg" },
-            { icon: "/icons/intelligent_payment/icon_4.svg" },
+            { icon: "/icons/intelligent_payment/icon_1.svg", white_icon: "/icons/intelligent_payment/white_icon_1.svg" },
+            { icon: "/icons/intelligent_payment/icon_2.svg", white_icon: "/icons/intelligent_payment/white_icon_2.svg" },
+            { icon: "/icons/intelligent_payment/icon_3.svg", white_icon: "/icons/intelligent_payment/white_icon_3.svg" },
+            { icon: "/icons/intelligent_payment/icon_4.svg", white_icon: "/icons/intelligent_payment/white_icon_4.svg" },
         ],
     },
     {
@@ -627,9 +645,9 @@ export const PAYMENT_PLATFORM = [
         title: "100+ shopper currencies",
         sub_title: "& 17 settlement currencies",
         image: [
-            { icon: "/icons/settlement_currencies/icon_1.svg" },
-            { icon: "/icons/settlement_currencies/icon_2.svg" },
-            { icon: "/icons/settlement_currencies/icon_3.svg" },
+            { icon: "/icons/settlement_currencies/icon_1.svg", white_icon: "/icons/settlement_currencies/white_icon_1.svg" },
+            { icon: "/icons/settlement_currencies/icon_2.svg", white_icon: "/icons/settlement_currencies/white_icon_2.svg" },
+            { icon: "/icons/settlement_currencies/icon_3.svg", white_icon: "/icons/settlement_currencies/white_icon_3.svg" },
         ],
     },
     {
@@ -638,10 +656,10 @@ export const PAYMENT_PLATFORM = [
         title: "100+ global payment types",
         sub_title: "& eWallets to convert more shoppers",
         image: [
-            { icon: "/icons/eWallets/icon_1.svg" },
-            { icon: "/icons/eWallets/icon_2.svg" },
-            { icon: "/icons/eWallets/icon_3.svg" },
-            { icon: "/icons/eWallets/icon_4.svg" },
+            { icon: "/icons/eWallets/icon_1.svg", white_icon: "/icons/eWallets/white_icon_1.svg" },
+            { icon: "/icons/eWallets/icon_2.svg", white_icon: "/icons/eWallets/white_icon_2.svg" },
+            { icon: "/icons/eWallets/icon_3.svg", white_icon: "/icons/eWallets/white_icon_3.svg" },
+            { icon: "/icons/eWallets/icon_4.svg", white_icon: "/icons/eWallets/white_icon_4.svg" },
         ],
     },
     {
@@ -649,8 +667,14 @@ export const PAYMENT_PLATFORM = [
         img: "/icons/fifth_icon.png",
         title: "Automated accounts receivable",
         image: [
-            { icon: "/icons/automated_accounts_receivable/icon_1.svg" },
-            { icon: "/icons/automated_accounts_receivable/icon_2.svg" },
+            {
+                icon: "/icons/automated_accounts_receivable/icon_1.svg",
+                white_icon: "/icons/automated_accounts_receivable/white_icon_1.svg"
+            },
+            {
+                icon: "/icons/automated_accounts_receivable/icon_2.svg",
+                white_icon: "/icons/automated_accounts_receivable/white_icon_2.svg"
+            },
         ],
     },
     {
@@ -659,10 +683,22 @@ export const PAYMENT_PLATFORM = [
         title: "Integrated fraud &",
         sub_title: "chargeback management",
         image: [
-            { icon: "/icons/chargeback_management/icon_1.svg" },
-            { icon: "/icons/chargeback_management/icon_2.svg" },
-            { icon: "/icons/chargeback_management/icon_3.svg" },
-            { icon: "/icons/chargeback_management/icon_4.svg" },
+            {
+                icon: "/icons/chargeback_management/icon_1.svg",
+                white_icon: "/icons/chargeback_management/white_icon_1.svg"
+            },
+            {
+                icon: "/icons/chargeback_management/icon_2.svg",
+                white_icon: "/icons/chargeback_management/white_icon_2.svg"
+            },
+            {
+                icon: "/icons/chargeback_management/icon_3.svg",
+                white_icon: "/icons/chargeback_management/white_icon_3.svg"
+            },
+            {
+                icon: "/icons/chargeback_management/icon_4.svg",
+                white_icon: "/icons/chargeback_management/white_icon_4.svg"
+            },
         ],
     },
     {
@@ -671,10 +707,10 @@ export const PAYMENT_PLATFORM = [
         title: "Built-in solutions for regulation &",
         sub_title: "tax compliance",
         image: [
-            { icon: "/icons/tax_compliance/icon_1.svg" },
-            { icon: "/icons/tax_compliance/icon_2.svg" },
-            { icon: "/icons/tax_compliance/icon_3.svg" },
-            { icon: "/icons/tax_compliance/icon_4.svg" },
+            { icon: "/icons/tax_compliance/icon_1.svg", white_icon: "/icons/tax_compliance/white_icon_1.svg" },
+            { icon: "/icons/tax_compliance/icon_2.svg", white_icon: "/icons/tax_compliance/white_icon_2.svg" },
+            { icon: "/icons/tax_compliance/icon_3.svg", white_icon: "/icons/tax_compliance/white_icon_3.svg" },
+            { icon: "/icons/tax_compliance/icon_4.svg", white_icon: "/icons/tax_compliance/white_icon_4.svg" },
         ],
     },
     {
@@ -682,10 +718,10 @@ export const PAYMENT_PLATFORM = [
         img: "/icons/eight_icon.png",
         title: "Reporting to increase visibility & simplify reconciliation",
         image: [
-            { icon: "/icons/simplify_reconciliation/icon_1.svg" },
-            { icon: "/icons/simplify_reconciliation/icon_2.svg" },
-            { icon: "/icons/simplify_reconciliation/icon_3.svg" },
-            { icon: "/icons/simplify_reconciliation/icon_4.svg" },
+            { icon: "/icons/simplify_reconciliation/icon_1.svg", white_icon: "/icons/simplify_reconciliation/white_icon_1.svg" },
+            { icon: "/icons/simplify_reconciliation/icon_2.svg", white_icon: "/icons/simplify_reconciliation/white_icon_2.svg" },
+            { icon: "/icons/simplify_reconciliation/icon_3.svg", white_icon: "/icons/simplify_reconciliation/white_icon_3.svg" },
+            { icon: "/icons/simplify_reconciliation/icon_4.svg", white_icon: "/icons/simplify_reconciliation/white_icon_4.svg" },
         ],
     },
 ];

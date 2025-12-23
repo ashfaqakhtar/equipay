@@ -151,7 +151,8 @@ const PaymentSection = () => {
                                                 {featureImage?.iconDefault && featureImage.iconDefault.length > 0 && (
                                                     <div className="flex items-center justify-center lg:mt-2 mt-1 gap-2">
                                                         {featureImage?.iconDefault?.map((data, idx) => (
-                                                            <img key={idx} src={data?.icon} alt={`Icon ${idx + 1}`}
+                                                            <img key={idx} alt={`Icon ${idx + 1}`}
+                                                                src={hoveredIndex === index ? data?.hover_icon : data?.icon}
                                                                 className="lg:w-[30px] w-6 h-auto"
                                                             />
                                                         ))}
@@ -215,8 +216,8 @@ const PaymentSection = () => {
                                                 {item?.image && item.image.length > 0 && (
                                                     <div className="flex mt-2 gap-2">
                                                         {item?.image?.map((data, idx) => (
-                                                            <div className="inline-block" key={idx}>
-                                                                <img src={data.icon} className={`sm:w-[30px] w-7 h-auto`} />
+                                                            <div className="inline-block my-auto" key={idx}>
+                                                                <img src={data?.white_icon} className={`sm:w-[30px] w-7 h-auto`} />
                                                             </div>
                                                         ))}
                                                     </div>
