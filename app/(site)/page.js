@@ -15,7 +15,7 @@ const Home = () => {
 
             <section className="lg:px-24 sm:px-7 px-5">
                 <div className='container mx-auto'>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 md:gap-0 gap-6 
+                    {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 md:gap-0 gap-6 
                         md:shadow-[0px_15px_30px_#0000001a] shadow-none md:-mt-10 mt-14 md:mb-8 mb-5 bg-white rounded-md"
                     >
                         {FEATURES_ITEMS?.map((item, index) => (
@@ -55,6 +55,69 @@ const Home = () => {
                                     relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-px 
                                     after:w-0 after:bg-linear-to-r after:from-[#ef793c] after:to-[#ff6a00] inline-block
                                     after:transition-all after:duration-500 hover:after:w-full text-[16px] lg:hidden"
+                                >
+                                    Read More
+                                </Link>
+                            </div>
+                        ))}
+                    </div> */}
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 md:gap-0 gap-6 
+                        md:shadow-[0px_15px_30px_#0000001a] shadow-none md:-mt-10 mt-14 md:mb-8 mb-5 bg-white rounded-md"
+                    >
+                        {FEATURES_ITEMS?.map((item, index) => (
+                            <div key={index} className="single-featured-box relative group text-center overflow-hidden
+                                md:border-r border-[#eeeeee] md:border-b md:border-0 lg:border-0 border lg:border-r p-8
+                                lg:last:border-r-0 md:last:border-r-none md:rounded-none rounded-md xl:p-7 lg:p-5 md:p-7"
+                            >
+                                <div className="relative h-[70px] w-full flex justify-center overflow-hidden">
+                                    <div className="flex flex-col transition-transform duration-300 
+                                        group-hover:-translate-y-[70px]"
+                                    >
+                                        <img src={item?.icon} alt={item?.title} className="w-[70px] mx-auto" />
+                                        <img src={item?.icon} alt={item?.title} className="w-[70px] mx-auto" />
+                                    </div>
+                                </div>
+
+                                <div className="mt-5">
+                                    <h3 className="text-[20px] font-semibold text-[#707070] leading-[1.2]">
+                                        {item?.title}
+                                    </h3>
+
+                                    <p className="mt-2.5 text-[15px] text-[#57647c] leading-[1.7]">
+                                        {item?.desc}
+                                    </p>
+                                </div>
+
+                                <div className="relative h-0 group-hover:h-10 w-full flex justify-center overflow-hidden">
+                                    <div className="flex flex-col transition-transform duration-300 group-hover:-translate-y-10">
+                                        <Link rel="preload" href={item?.url} className="read-more linear-gradient-text opacity-0  
+                                            group-hover:opacity-100 group-hover:visible group-hover:-translate-y-1.5 invisible 
+                                            mt-4.5 relative after:content-[''] after:absolute after:left-0 after:bottom-0 
+                                            after:h-px after:w-0 after:bg-linear-to-r after:from-[#ef793c] after:to-[#ff6a00] 
+                                            hidden after:transition-all after:duration-500 hover:after:w-full text-[16px] 
+                                            lg:inline-block"
+                                        >
+                                            Read More
+                                        </Link>
+
+
+                                        <Link rel="preload" href={item?.url} className="read-more linear-gradient-text opacity-0  
+                                            group-hover:opacity-100 group-hover:visible group-hover:-translate-y-1.5 invisible 
+                                            mt-4.5 relative after:content-[''] after:absolute after:left-0 after:bottom-0 
+                                            after:h-px after:w-0 after:bg-linear-to-r after:from-[#ef793c] after:to-[#ff6a00] 
+                                            hidden after:transition-all after:duration-500 hover:after:w-full text-[16px] 
+                                            lg:inline-block"
+                                        >
+                                            Read More
+                                        </Link>
+                                    </div>
+                                </div>
+
+                                <Link rel="preload" href={item?.url} className="mt-5 linear-gradient-text relative after:w-0 
+                                    after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-px lg:hidden
+                                    after:bg-linear-to-r after:from-[#ef793c] after:to-[#ff6a00] inline-block
+                                    after:transition-all after:duration-500 hover:after:w-full text-[16px]"
                                 >
                                     Read More
                                 </Link>
